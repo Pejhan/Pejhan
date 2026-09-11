@@ -9,6 +9,8 @@
   --muted: color-mix(in srgb, var(--ink) 70%, var(--paper));
   --line: color-mix(in srgb, var(--ink) 20%, var(--paper));
   --accent-hover: color-mix(in srgb, var(--accent) 82%, var(--ink));
+  --radius-soft: 0.55rem;
+  --radius-pill: 999px;
   --max-width: 76rem;
   --narrow-width: 48rem;
   --heading-font: "Plein", ui-sans-serif, system-ui, sans-serif;
@@ -82,7 +84,7 @@ a:hover {
 
 a:focus-visible,
 button:focus-visible {
-  border-radius: 0.15rem;
+  border-radius: 0.35rem;
   outline: 3px solid var(--accent-hover);
   outline-offset: 4px;
 }
@@ -152,6 +154,7 @@ em {
   top: 0.75rem;
   left: 0.75rem;
   padding: 0.7rem 1rem;
+  border-radius: var(--radius-soft);
   background: var(--ink);
   color: var(--paper);
   transform: translateY(-160%);
@@ -318,6 +321,7 @@ em {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--accent);
+  border-radius: var(--radius-pill);
   text-decoration: none;
 }
 
@@ -340,6 +344,7 @@ em {
   position: relative;
   padding: 1.5rem;
   border: 1px solid var(--line);
+  border-radius: var(--radius-soft);
   background: color-mix(in srgb, var(--paper) 94%, var(--accent));
 }
 
@@ -452,8 +457,9 @@ em {
 }
 
 .status {
-  padding: 0.35rem 0.55rem;
+  padding: 0.35rem 0.7rem;
   border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
   color: var(--muted);
   font-size: 0.68rem;
   font-weight: 700;
@@ -499,7 +505,8 @@ em {
 }
 
 .tag-list li {
-  padding: 0.3rem 0.55rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-pill);
   background: var(--paper-deep);
   color: var(--muted);
   font-size: 0.72rem;
@@ -580,7 +587,9 @@ em {
 
 .contact-links {
   display: grid;
-  border-top: 1px solid var(--line);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-soft);
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -696,6 +705,7 @@ em {
 
 .prose blockquote {
   padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius-soft) var(--radius-soft) 0;
   border-left: 3px solid var(--accent);
   background: var(--paper-deep);
   color: var(--muted);
