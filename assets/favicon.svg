@@ -1,5 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Observed data point">
-  <rect width="64" height="64" rx="12" fill="#f4f2ea"/>
-  <path d="M13 11v40h40" fill="none" stroke="#476b5c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="43" cy="22" r="6" fill="#476b5c"/>
+  <style>
+    .paper { fill: #f4f2ea; }
+    .mark { fill: none; stroke: #476b5c; }
+    .point { fill: #476b5c; }
+    @media (prefers-color-scheme: dark) {
+      .paper { fill: #18211d; }
+      .mark { stroke: #8fb3a2; }
+      .point { fill: #8fb3a2; }
+    }
+  </style>
+  <rect class="paper" width="64" height="64" rx="12"/>
+  <path class="mark" d="M13 11v40h40" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="point" cx="43" cy="22" r="6"/>
 </svg>

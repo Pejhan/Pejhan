@@ -13,6 +13,23 @@
   --narrow-width: 48rem;
   --heading-font: "Plein", ui-sans-serif, system-ui, sans-serif;
   --body-font: "Switzer", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --paper: #18211d;
+  --ink: #e4e8e3;
+  --accent: #8fb3a2;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --paper: #18211d;
+    --ink: #e4e8e3;
+    --accent: #8fb3a2;
+    color-scheme: dark;
+  }
 }
 
 *,
@@ -34,6 +51,7 @@ body {
   font-size: 1rem;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 body::before {
@@ -169,7 +187,7 @@ em {
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.09em;
   text-decoration: none;
@@ -213,6 +231,49 @@ em {
   letter-spacing: 0.11em;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.nav-list li {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.45rem;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--paper-deep);
+  color: var(--accent-hover);
+}
+
+.theme-icon {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  grid-area: 1 / 1;
+}
+
+.theme-icon-sun,
+:root[data-theme="dark"] .theme-icon-moon {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon-sun {
+  display: block;
 }
 
 .hero {
@@ -357,6 +418,10 @@ em {
   stroke-linecap: round;
   stroke-linejoin: round;
   opacity: 0.6;
+}
+
+.section-heading h2 {
+  font-weight: 500;
 }
 
 .section-intro {
@@ -701,7 +766,7 @@ em {
   .nav-list {
     width: 100%;
     justify-content: space-between;
-    gap: 0.75rem;
+    gap: 0.45rem;
   }
 
   .nav-list a {
@@ -766,6 +831,13 @@ em {
 }
 
 @media print {
+  :root {
+    --paper: #fff;
+    --ink: #111;
+    --accent: #476b5c;
+    color-scheme: light;
+  }
+
   .site-header,
   .site-footer,
   .hero-actions {
