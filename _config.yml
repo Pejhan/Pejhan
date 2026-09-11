@@ -1,21 +1,21 @@
 title: "Your Name — Data & BI"
 description: "Data analyst and BI developer turning complex data into clear decisions."
-url: "https://username.github.io"
+url: "https://pejhan.github.io"
 baseurl: ""
 lang: en
 timezone: UTC
 
 author:
-  name: "Your Name"
-  initials: "YN"
+  name: "Pezhman Aliabadi"
+  initials: "PA"
   role: "Data Analyst & BI Developer"
-  location: "Your City"
-  email: "hello@example.com"
+  location: "Shiraz"
+  email: "pjmn.albd@gmail.com"
   bio: "I turn scattered data into reliable models, useful dashboards, and decisions people can act on."
 
 social:
-  github: "https://github.com/username"
-  linkedin: "https://www.linkedin.com/in/username"
+  github: "https://github.com/pejhan"
+  linkedin: "https://www.linkedin.com/in/pejhan"
   resume: ""
 
 permalink: /writing/:title/
