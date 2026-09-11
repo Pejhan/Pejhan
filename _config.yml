@@ -1,5 +1,5 @@
-title: "Pezhman Aliabadi — Data Analyst & BI Developer"
-description: "Data analyst and BI developer turning complex data into clear decisions."
+title: "Pezhman Aliabadi — Notes on Data"
+description: "Notes on data analysis, reporting, and the practical problems that appear along the way."
 url: "https://pejhan.ir"
 baseurl: ""
 lang: en
@@ -11,7 +11,7 @@ author:
   role: "Data Analyst & BI Developer"
   location: "Shiraz"
   email: "pjmn.albd@gmail.com"
-  bio: "I turn scattered data into reliable models, useful dashboards, and decisions people can act on."
+  bio: "I use this site to document questions, trade-offs, and lessons from working with data and reporting."
 
 social:
   github: "https://github.com/pejhan"
@@ -33,4 +33,3 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
-

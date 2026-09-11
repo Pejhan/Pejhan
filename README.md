@@ -1,60 +1,60 @@
-# Pezhman Aliabadi — Data & BI Portfolio
+# Pezhman Aliabadi — Notes on Data
 
-Welcome! 👋 This repository powers [pejhan.ir](https://pejhan.ir), a focused portfolio about turning raw data into useful, trustworthy decisions.
+Welcome 👋 This repository powers [pejhan.ir](https://pejhan.ir), a small collection of notes and working examples about data analysis, reporting, and the questions that appear along the way.
 
 ## 🗺️ Site map
 
 ### 🏠 Home — `/`
 
-The homepage is the main route through the portfolio. It introduces Pezhman’s work as a Data Analyst and BI Developer and connects visitors to selected projects, writing, background, contact details, and—when available—the résumé.
+The homepage introduces the notebook and points toward case notes, writing, background, and contact details. The emphasis is on problems, assumptions, limitations, and lessons rather than polished success stories.
 
 ### 📄 Résumé — planned
 
-A downloadable résumé is not published yet. When added, it will be linked from the homepage contact section through the `social.resume` setting in `_config.yml`.
+A downloadable résumé is not published yet. When it is ready, it will be linked from the contact section through the `social.resume` setting in `_config.yml`.
 
-### 📊 Projects — `/#work`
+### 📊 Case notes — `/#work`
 
-The selected-work section currently contains three illustrative case studies:
+The site currently includes three illustrative working examples:
 
-- **Sales Performance Dashboard** — Power BI, DAX, and SQL analysis of revenue, targets, regions, and products.
-- **Customer Churn Analysis** — Python-based cohort analysis of customer behavior and early churn signals.
-- **Analytics Data Warehouse** — dimensional modeling and ETL work designed to create consistent reporting definitions.
+- **A sales reporting exercise** — looking at revenue, targets, regions, and products with Power BI, DAX, and SQL.
+- **Exploring churn signals** — using Python to examine customer behavior while keeping correlation separate from explanation.
+- **A small analytics warehouse** — thinking through grain, shared dimensions, data checks, and conflicting business definitions.
 
-Project content is maintained in `_data/projects.yml`. The current entries are samples and will be replaced or expanded with finished portfolio work.
+These examples are maintained in `_data/projects.yml`. They are starting points and should not be read as finished client work.
 
-### ✍️ Posts — `/writing/`
+### ✍️ Writing — `/writing/`
 
-The writing archive collects practical notes about analytics, business intelligence, data modeling, and dashboard design.
+The writing archive holds questions, trade-offs, and lessons from reports, models, and imperfect data.
 
-Current article:
+Current note:
 
-- **Building a dashboard people trust** — a practical framework for moving from a reporting request to a dependable decision-making tool.
+- **Notes on building a dashboard people can trust** — observations about moving from a reporting request toward a more dependable decision-making tool.
 
 Posts live in `_posts/` and automatically appear on the homepage, writing archive, feed, and sitemap.
 
-### 👤 About — `/#about`
+### 👤 Context — `/#about`
 
-A short overview of Pezhman’s approach and core capabilities across analysis, data modeling, visualization, and stakeholder collaboration.
+A short explanation of who is keeping these notes, the tools involved, and the subjects still being learned.
 
 ### 💬 Contact — `/#contact`
 
-Direct links to email, GitHub, LinkedIn, and eventually the downloadable résumé.
+Links for email, GitHub, LinkedIn, and eventually the downloadable résumé.
 
 ## 🔎 Supporting routes
 
 - **RSS/Atom feed:** `/feed.xml`
 - **XML sitemap:** `/sitemap.xml`
-- **Custom not-found page:** `/404.html`
+- **Not-found page:** `/404.html`
 
 ## 🧱 Content at a glance
 
 ```text
 Home
-├── Selected projects
-├── Recent posts
-├── About and capabilities
+├── Case notes
+├── Recent writing
+├── Context
 └── Contact and résumé link
 
 Writing
-└── Individual article pages
+└── Individual note pages
 ```

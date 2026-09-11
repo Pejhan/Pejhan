@@ -1,11 +1,11 @@
 ---
-title: "Building a dashboard people trust"
-description: "A practical framework for turning a reporting request into a dependable decision-making tool."
+title: "Notes on building a dashboard people can trust"
+description: "A few observations about turning a reporting request into a more dependable decision-making tool."
 date: 2026-01-01
 tags: [power-bi, analytics]
 ---
 
-> This is sample portfolio content. Replace it with your own experience, examples, and point of view before publishing the site professionally.
+> This is a sample note. It is here to show the intended format and will change as real examples are added.
 
 A dashboard earns trust before anyone looks at its colors. Trust begins with a shared definition of the question, continues through the data model, and becomes visible in every label, filter, and comparison.
 

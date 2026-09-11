@@ -1,25 +1,25 @@
 ---
 layout: default
 title:
-description: "Data analyst and BI developer portfolio featuring dashboards, analytics case studies, data modeling, and practical writing."
+description: "Notes on data analysis, reporting, and lessons from practical work."
 ---
 <section class="hero shell" aria-labelledby="hero-title">
   <div class="hero-copy">
-    <p class="kicker">{{ site.author.role }} · {{ site.author.location }}</p>
-    <h1 id="hero-title">Data should make the next decision <em>clear.</em></h1>
+    <p class="kicker">Notes on data · {{ site.author.location }}</p>
+    <h1 id="hero-title">Working through data, <em>one question at a time.</em></h1>
     <p class="hero-deck">{{ site.author.bio }}</p>
     <div class="hero-actions">
-      <a class="button button-primary" href="#work">Explore my work</a>
-      <a class="text-link" href="mailto:{{ site.author.email }}">Start a conversation <span aria-hidden="true">↗</span></a>
+      <a class="button button-primary" href="#work">Read the case notes</a>
+      <a class="text-link" href="mailto:{{ site.author.email }}">Say hello <span aria-hidden="true">↗</span></a>
     </div>
   </div>
-  <aside class="signal-card" aria-label="Portfolio focus">
-    <p class="signal-label">Current focus</p>
-    <p class="signal-value">From raw tables<br>to trusted answers.</p>
+  <aside class="signal-card" aria-label="A recurring question in data work">
+    <p class="signal-label">A recurring question</p>
+    <p class="signal-value">What can this data<br>actually support?</p>
     <dl class="signal-list">
-      <div><dt>Model</dt><dd>Reliable</dd></div>
-      <div><dt>Measure</dt><dd>Relevant</dd></div>
-      <div><dt>Explain</dt><dd>Clearly</dd></div>
+      <div><dt>Context</dt><dd>What changed?</dd></div>
+      <div><dt>Limits</dt><dd>What is missing?</dd></div>
+      <div><dt>Use</dt><dd>What follows?</dd></div>
     </dl>
   </aside>
 </section>
@@ -31,9 +31,9 @@ description: "Data analyst and BI developer portfolio featuring dashboards, anal
       <svg class="section-icon" viewBox="0 0 40 40" focusable="false"><path d="M6 5v29h29M10 28l8-8 6 3 10-14"/></svg>
     </div>
     <div>
-      <p class="kicker">Selected work</p>
-      <h2 id="work-title">Analysis with a point of view.</h2>
-      <p class="section-intro">A dashboard is useful only when it helps someone notice, understand, and act.</p>
+      <p class="kicker">Case notes</p>
+      <h2 id="work-title">Problems, approaches, and what I learned.</h2>
+      <p class="section-intro">A few working examples, including the assumptions and limitations that shaped them.</p>
     </div>
   </div>
 
@@ -45,13 +45,13 @@ description: "Data analyst and BI developer portfolio featuring dashboards, anal
           <p class="kicker">{{ project.eyebrow }}</p>
           <h3>{{ project.title }}</h3>
         </div>
-        {% if project.placeholder %}<span class="status">Sample case study</span>{% endif %}
+        {% if project.placeholder %}<span class="status">Working example</span>{% endif %}
       </header>
       <p class="project-question">{{ project.question }}</p>
       <dl class="project-details">
         <div><dt>Data</dt><dd>{{ project.dataset }}</dd></div>
         <div><dt>Approach</dt><dd>{{ project.approach }}</dd></div>
-        <div><dt>Outcome</dt><dd>{{ project.result }}</dd></div>
+        <div><dt>Notes</dt><dd>{{ project.result }}</dd></div>
       </dl>
       <div class="project-footer">
         <ul class="tag-list" aria-label="Tools used">
@@ -59,9 +59,9 @@ description: "Data analyst and BI developer portfolio featuring dashboards, anal
         </ul>
         {% if project.case_study_url != empty or project.repository_url != empty or project.live_url != empty %}
         <div class="project-links">
-          {% if project.case_study_url != empty %}<a href="{{ project.case_study_url }}">Case study</a>{% endif %}
+          {% if project.case_study_url != empty %}<a href="{{ project.case_study_url }}">Case notes</a>{% endif %}
           {% if project.repository_url != empty %}<a href="{{ project.repository_url }}">Repository</a>{% endif %}
-          {% if project.live_url != empty %}<a href="{{ project.live_url }}">Live dashboard</a>{% endif %}
+          {% if project.live_url != empty %}<a href="{{ project.live_url }}">Live report</a>{% endif %}
         </div>
         {% endif %}
       </div>
@@ -78,8 +78,8 @@ description: "Data analyst and BI developer portfolio featuring dashboards, anal
     </div>
     <div>
       <p class="kicker">Writing</p>
-      <h2 id="writing-title">Notes from the work.</h2>
-      <p class="section-intro">Practical essays about analytics, BI, and the choices behind a useful data product.</p>
+      <h2 id="writing-title">Notes and observations.</h2>
+      <p class="section-intro">Things I have noticed while working with reports, models, and imperfect data.</p>
     </div>
   </div>
 
@@ -95,7 +95,7 @@ description: "Data analyst and BI developer portfolio featuring dashboards, anal
     </article>
     {% endfor %}
   </div>
-  <p class="section-action"><a class="text-link" href="{{ '/writing/' | relative_url }}">Browse all writing <span aria-hidden="true">→</span></a></p>
+  <p class="section-action"><a class="text-link" href="{{ '/writing/' | relative_url }}">See all notes <span aria-hidden="true">→</span></a></p>
 </section>
 
 <section class="section shell" id="about" aria-labelledby="about-title">
@@ -106,19 +106,19 @@ description: "Data analyst and BI developer portfolio featuring dashboards, anal
     </div>
     <div>
       <p class="kicker">About</p>
-      <h2 id="about-title">Technical enough for the data. Clear enough for the room.</h2>
+      <h2 id="about-title">A little context.</h2>
     </div>
   </div>
   <div class="about-grid">
     <div class="about-copy">
-      <p>I work across analysis and business intelligence: clarifying the question, shaping dependable data, choosing honest measures, and presenting the result without noise.</p>
-      <p>This portfolio is a starter. Replace this copy with the industries, problems, and kinds of teams you know best.</p>
+      <p>I work with analysis and business intelligence. Most of the interesting parts happen before a chart is finished: understanding the question, checking what the data can support, and deciding what should remain uncertain.</p>
+      <p>This site is where I keep examples and notes from that process. They are not final answers—just records of what I tried, what worked, and what I would reconsider.</p>
     </div>
     <dl class="capability-list">
-      <div><dt>Analyze</dt><dd>SQL · Python · statistics</dd></div>
-      <div><dt>Model</dt><dd>Star schemas · DAX · ETL</dd></div>
-      <div><dt>Visualize</dt><dd>Power BI · dashboards · storytelling</dd></div>
-      <div><dt>Collaborate</dt><dd>Requirements · documentation · enablement</dd></div>
+      <div><dt>Often using</dt><dd>SQL · Python · statistics</dd></div>
+      <div><dt>Working with</dt><dd>Star schemas · DAX · ETL</dd></div>
+      <div><dt>Thinking about</dt><dd>Power BI · dashboards · explanation</dd></div>
+      <div><dt>Still learning</dt><dd>Requirements · documentation · communication</dd></div>
     </dl>
   </div>
 </section>
@@ -131,14 +131,14 @@ description: "Data analyst and BI developer portfolio featuring dashboards, anal
     </div>
     <div>
       <p class="kicker">Contact</p>
-      <h2 id="contact-title">Have a question hiding in the data?</h2>
-      <p class="section-intro">I’m always interested in thoughtful analytics work and useful BI products.</p>
+      <h2 id="contact-title">If any of this overlaps with your work.</h2>
+      <p class="section-intro">I am happy to compare notes, hear another perspective, or talk through a data problem.</p>
     </div>
   </div>
   <div class="contact-links">
     <a href="mailto:{{ site.author.email }}"><span>Email</span><strong>{{ site.author.email }}</strong><span aria-hidden="true">↗</span></a>
-    <a href="{{ site.social.github }}"><span>GitHub</span><strong>@username</strong><span aria-hidden="true">↗</span></a>
-    <a href="{{ site.social.linkedin }}"><span>LinkedIn</span><strong>/in/username</strong><span aria-hidden="true">↗</span></a>
+    <a href="{{ site.social.github }}"><span>GitHub</span><strong>@pejhan</strong><span aria-hidden="true">↗</span></a>
+    <a href="{{ site.social.linkedin }}"><span>LinkedIn</span><strong>/in/pejhan</strong><span aria-hidden="true">↗</span></a>
     {% if site.social.resume != empty %}<a href="{{ site.social.resume | relative_url }}"><span>Résumé</span><strong>Download PDF</strong><span aria-hidden="true">↓</span></a>{% endif %}
   </div>
 </section>

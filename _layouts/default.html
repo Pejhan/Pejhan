@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f4f1e9">
+    <meta name="theme-color" content="#f4f2ea">
     <meta name="color-scheme" content="light">
 
     {% assign page_title = page.title | default: site.title %}
     {% assign page_description = page.description | default: site.description %}
-    <title>{% if page.title %}{{ page.title }} · {{ site.author.name }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ page_description | strip_html | normalize_whitespace | escape }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
 
@@ -24,22 +24,22 @@
     <link rel="preconnect" href="https://api.fontshare.com">
     <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
     <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800&amp;f[]=plein@400&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="{{ site.author.name }} — home">
+        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Notes on data — home">
           <span class="wordmark-mark" aria-hidden="true">{{ site.author.initials }}</span>
-          <span>{{ site.author.name }}</span>
+          <span>Notes on data</span>
         </a>
         <nav aria-label="Primary navigation">
           <ul class="nav-list">
-            <li><a href="{{ '/' | relative_url }}#work">Work</a></li>
+            <li><a href="{{ '/' | relative_url }}#work">Case notes</a></li>
             <li><a href="{{ '/' | relative_url }}#writing">Writing</a></li>
-            <li><a href="{{ '/' | relative_url }}#about">About</a></li>
+            <li><a href="{{ '/' | relative_url }}#about">Context</a></li>
             <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
           </ul>
         </nav>
@@ -50,10 +50,9 @@
 
     <footer class="site-footer">
       <div class="shell footer-inner">
-        <p>© {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
-        <p>Built with Jekyll and hosted on GitHub Pages.</p>
+        <p>{{ site.author.name }} · {{ site.author.role }}</p>
+        <p>A small collection of working notes.</p>
       </div>
     </footer>
   </body>
 </html>
-

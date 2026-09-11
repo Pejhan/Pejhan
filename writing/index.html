@@ -1,24 +1,23 @@
 ---
 layout: default
 title: Writing
-description: "Practical notes about analytics, business intelligence, data modeling, and dashboard design."
+description: "Notes about data analysis, reporting, modeling, and the questions that arise in practice."
 permalink: /writing/
 ---
 <section class="page-hero shell narrow">
   <p class="kicker">Writing</p>
-  <h1>Ideas made useful.</h1>
-  <p class="hero-deck">Notes on the decisions behind good analytics: what to measure, how to model it, and how to communicate it.</p>
+  <h1>Notes from working with data.</h1>
+  <p class="hero-deck">Questions, trade-offs, and small lessons from reports, models, and the decisions around them.</p>
 </section>
 
 <section class="shell narrow archive" aria-labelledby="articles-title">
-  <h2 class="visually-hidden" id="articles-title">All articles</h2>
+  <h2 class="visually-hidden" id="articles-title">All notes</h2>
   {% for post in site.posts %}
   <article class="archive-item">
     <p class="writing-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time> · {{ post.tags | join: ' · ' }}</p>
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p>{{ post.description }}</p>
-    <a class="text-link" href="{{ post.url | relative_url }}">Read article <span aria-hidden="true">→</span></a>
+    <a class="text-link" href="{{ post.url | relative_url }}">Read note <span aria-hidden="true">→</span></a>
   </article>
   {% endfor %}
 </section>
-

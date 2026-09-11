@@ -1,45 +1,44 @@
-- title: "Sales Performance Dashboard"
-  eyebrow: "Business intelligence"
-  question: "Where is revenue growing, and which regions or products are falling behind target?"
+- title: "A sales reporting exercise"
+  eyebrow: "Working example"
+  question: "Where is revenue changing, and which regions or products need a closer look?"
   dataset: "Illustrative retail orders, targets, products, and regional sales data."
   tools:
     - Power BI
     - DAX
     - SQL
-  approach: "Modeled sales and target data in a star schema, defined reusable measures, and designed an executive drill-down from company performance to product detail."
-  result: "Example outcome: reduced the weekly reporting workflow from several hours to a few minutes."
+  approach: "I used a simple star schema and a small set of measures, then compared company-level totals with regional and product detail."
+  result: "The exercise was a reminder that target definitions and comparison periods need to be settled before the dashboard layout."
   case_study_url: ""
   repository_url: ""
   live_url: ""
   placeholder: true
 
-- title: "Customer Churn Analysis"
-  eyebrow: "Analytics case study"
-  question: "Which customer behaviors are the clearest early signals of churn?"
+- title: "Exploring churn signals"
+  eyebrow: "Exploration"
+  question: "Which customer behaviors might be useful early signals of churn?"
   dataset: "Illustrative subscription, support, tenure, and account-activity records."
   tools:
     - Python
     - pandas
     - Seaborn
-  approach: "Cleaned customer history, compared churn across meaningful cohorts, and translated the strongest behavioral patterns into retention opportunities."
-  result: "Example outcome: identified three actionable segments for prioritized retention campaigns."
+  approach: "I cleaned the customer history and compared churn across a few cohorts, while keeping correlation separate from explanation."
+  result: "Several segments looked worth investigating, but the sample was better suited to forming questions than making causal claims."
   case_study_url: ""
   repository_url: ""
   live_url: ""
   placeholder: true
 
-- title: "Analytics Data Warehouse"
-  eyebrow: "Data engineering"
-  question: "How can teams report from one consistent source instead of reconciling spreadsheets?"
+- title: "A small analytics warehouse"
+  eyebrow: "Modeling exercise"
+  question: "How might several reporting sources be brought together without hiding their differences?"
   dataset: "Illustrative CRM, finance, and product-usage sources."
   tools:
     - SQL
     - Dimensional modeling
     - ETL
-  approach: "Defined business grain, built conformed dimensions and fact tables, and added data-quality checks around an incremental load process."
-  result: "Example outcome: established trusted definitions for revenue, customers, and product adoption."
+  approach: "I defined the grain, sketched shared dimensions and fact tables, and added a few checks around incremental loading."
+  result: "The difficult part was not the schema itself, but deciding where apparently similar business definitions were not actually the same."
   case_study_url: ""
   repository_url: ""
   live_url: ""
   placeholder: true
-
