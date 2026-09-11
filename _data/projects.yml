@@ -1,0 +1,45 @@
+- title: "Sales Performance Dashboard"
+  eyebrow: "Business intelligence"
+  question: "Where is revenue growing, and which regions or products are falling behind target?"
+  dataset: "Illustrative retail orders, targets, products, and regional sales data."
+  tools:
+    - Power BI
+    - DAX
+    - SQL
+  approach: "Modeled sales and target data in a star schema, defined reusable measures, and designed an executive drill-down from company performance to product detail."
+  result: "Example outcome: reduced the weekly reporting workflow from several hours to a few minutes."
+  case_study_url: ""
+  repository_url: ""
+  live_url: ""
+  placeholder: true
+
+- title: "Customer Churn Analysis"
+  eyebrow: "Analytics case study"
+  question: "Which customer behaviors are the clearest early signals of churn?"
+  dataset: "Illustrative subscription, support, tenure, and account-activity records."
+  tools:
+    - Python
+    - pandas
+    - Seaborn
+  approach: "Cleaned customer history, compared churn across meaningful cohorts, and translated the strongest behavioral patterns into retention opportunities."
+  result: "Example outcome: identified three actionable segments for prioritized retention campaigns."
+  case_study_url: ""
+  repository_url: ""
+  live_url: ""
+  placeholder: true
+
+- title: "Analytics Data Warehouse"
+  eyebrow: "Data engineering"
+  question: "How can teams report from one consistent source instead of reconciling spreadsheets?"
+  dataset: "Illustrative CRM, finance, and product-usage sources."
+  tools:
+    - SQL
+    - Dimensional modeling
+    - ETL
+  approach: "Defined business grain, built conformed dimensions and fact tables, and added data-quality checks around an incremental load process."
+  result: "Example outcome: established trusted definitions for revenue, customers, and product adoption."
+  case_study_url: ""
+  repository_url: ""
+  live_url: ""
+  placeholder: true
+

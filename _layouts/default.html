@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f1e9">
+    <meta name="color-scheme" content="light">
+
+    {% assign page_title = page.title | default: site.title %}
+    {% assign page_description = page.description | default: site.description %}
+    <title>{% if page.title %}{{ page.title }} · {{ site.author.name }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ page_description | strip_html | normalize_whitespace | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{{ page_title | escape }}">
+    <meta property="og:description" content="{{ page_description | strip_html | normalize_whitespace | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.title | escape }}">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="{{ site.author.name }} — home">
+          <span class="wordmark-mark" aria-hidden="true">{{ site.author.initials }}</span>
+          <span>{{ site.author.name }}</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="{{ '/' | relative_url }}#work">Work</a></li>
+            <li><a href="{{ '/' | relative_url }}#writing">Writing</a></li>
+            <li><a href="{{ '/' | relative_url }}#about">About</a></li>
+            <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">{{ content }}</main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>© {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+        <p>Built with Jekyll and hosted on GitHub Pages.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+

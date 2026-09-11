@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page_item in site.pages %}
+    {% if page_item.sitemap != false and page_item.url and page_item.url != '/feed.xml' and page_item.url != '/sitemap.xml' %}
+  <url><loc>{{ page_item.url | absolute_url }}</loc></url>
+    {% endif %}
+  {% endfor %}
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ post.url | absolute_url }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+  </url>
+  {% endfor %}
+</urlset>
+

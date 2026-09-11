@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="post shell narrow">
+  <header class="post-header">
+    <a class="back-link" href="{{ '/writing/' | relative_url }}">← All writing</a>
+    <p class="kicker">{% if page.tags.size > 0 %}{{ page.tags | join: ' · ' }}{% else %}Essay{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="post-deck">{{ page.description }}</p>{% endif %}
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
+      <span aria-hidden="true">·</span>
+      <span>{{ content | number_of_words | divided_by: 220 | plus: 1 }} min read</span>
+    </div>
+  </header>
+  <div class="prose">{{ content }}</div>
+</article>
+

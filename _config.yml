@@ -1,0 +1,36 @@
+title: "Your Name — Data & BI"
+description: "Data analyst and BI developer turning complex data into clear decisions."
+url: "https://username.github.io"
+baseurl: ""
+lang: en
+timezone: UTC
+
+author:
+  name: "Your Name"
+  initials: "YN"
+  role: "Data Analyst & BI Developer"
+  location: "Your City"
+  email: "hello@example.com"
+  bio: "I turn scattered data into reliable models, useful dashboards, and decisions people can act on."
+
+social:
+  github: "https://github.com/username"
+  linkedin: "https://www.linkedin.com/in/username"
+  resume: ""
+
+permalink: /writing/:title/
+markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+

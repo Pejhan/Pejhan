@@ -1,0 +1,132 @@
+---
+layout: default
+title:
+description: "Data analyst and BI developer portfolio featuring dashboards, analytics case studies, data modeling, and practical writing."
+---
+<section class="hero shell" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="kicker">{{ site.author.role }} · {{ site.author.location }}</p>
+    <h1 id="hero-title">Data should make the next decision <em>clear.</em></h1>
+    <p class="hero-deck">{{ site.author.bio }}</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="#work">Explore my work</a>
+      <a class="text-link" href="mailto:{{ site.author.email }}">Start a conversation <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <aside class="signal-card" aria-label="Portfolio focus">
+    <p class="signal-label">Current focus</p>
+    <p class="signal-value">From raw tables<br>to trusted answers.</p>
+    <dl class="signal-list">
+      <div><dt>Model</dt><dd>Reliable</dd></div>
+      <div><dt>Measure</dt><dd>Relevant</dd></div>
+      <div><dt>Explain</dt><dd>Clearly</dd></div>
+    </dl>
+  </aside>
+</section>
+
+<section class="section shell" id="work" aria-labelledby="work-title">
+  <div class="section-heading">
+    <p class="section-number" aria-hidden="true">01</p>
+    <div>
+      <p class="kicker">Selected work</p>
+      <h2 id="work-title">Analysis with a point of view.</h2>
+      <p class="section-intro">A dashboard is useful only when it helps someone notice, understand, and act.</p>
+    </div>
+  </div>
+
+  <div class="project-list">
+    {% for project in site.data.projects %}
+    <article class="project-card">
+      <header class="project-header">
+        <div>
+          <p class="kicker">{{ project.eyebrow }}</p>
+          <h3>{{ project.title }}</h3>
+        </div>
+        {% if project.placeholder %}<span class="status">Sample case study</span>{% endif %}
+      </header>
+      <p class="project-question">{{ project.question }}</p>
+      <dl class="project-details">
+        <div><dt>Data</dt><dd>{{ project.dataset }}</dd></div>
+        <div><dt>Approach</dt><dd>{{ project.approach }}</dd></div>
+        <div><dt>Outcome</dt><dd>{{ project.result }}</dd></div>
+      </dl>
+      <div class="project-footer">
+        <ul class="tag-list" aria-label="Tools used">
+          {% for tool in project.tools %}<li>{{ tool }}</li>{% endfor %}
+        </ul>
+        {% if project.case_study_url != empty or project.repository_url != empty or project.live_url != empty %}
+        <div class="project-links">
+          {% if project.case_study_url != empty %}<a href="{{ project.case_study_url }}">Case study</a>{% endif %}
+          {% if project.repository_url != empty %}<a href="{{ project.repository_url }}">Repository</a>{% endif %}
+          {% if project.live_url != empty %}<a href="{{ project.live_url }}">Live dashboard</a>{% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section shell" id="writing" aria-labelledby="writing-title">
+  <div class="section-heading">
+    <p class="section-number" aria-hidden="true">02</p>
+    <div>
+      <p class="kicker">Writing</p>
+      <h2 id="writing-title">Notes from the work.</h2>
+      <p class="section-intro">Practical essays about analytics, BI, and the choices behind a useful data product.</p>
+    </div>
+  </div>
+
+  <div class="writing-list">
+    {% for post in site.posts limit:3 %}
+    <article class="writing-item">
+      <div>
+        <p class="writing-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time> · {{ post.tags | join: ' · ' }}</p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description }}</p>
+      </div>
+      <span class="read-time">{{ post.content | number_of_words | divided_by: 220 | plus: 1 }} min <span aria-hidden="true">↗</span></span>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="section-action"><a class="text-link" href="{{ '/writing/' | relative_url }}">Browse all writing <span aria-hidden="true">→</span></a></p>
+</section>
+
+<section class="section shell" id="about" aria-labelledby="about-title">
+  <div class="section-heading">
+    <p class="section-number" aria-hidden="true">03</p>
+    <div>
+      <p class="kicker">About</p>
+      <h2 id="about-title">Technical enough for the data. Clear enough for the room.</h2>
+    </div>
+  </div>
+  <div class="about-grid">
+    <div class="about-copy">
+      <p>I work across analysis and business intelligence: clarifying the question, shaping dependable data, choosing honest measures, and presenting the result without noise.</p>
+      <p>This portfolio is a starter. Replace this copy with the industries, problems, and kinds of teams you know best.</p>
+    </div>
+    <dl class="capability-list">
+      <div><dt>Analyze</dt><dd>SQL · Python · statistics</dd></div>
+      <div><dt>Model</dt><dd>Star schemas · DAX · ETL</dd></div>
+      <div><dt>Visualize</dt><dd>Power BI · dashboards · storytelling</dd></div>
+      <div><dt>Collaborate</dt><dd>Requirements · documentation · enablement</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section contact-section shell" id="contact" aria-labelledby="contact-title">
+  <div class="section-heading">
+    <p class="section-number" aria-hidden="true">04</p>
+    <div>
+      <p class="kicker">Contact</p>
+      <h2 id="contact-title">Have a question hiding in the data?</h2>
+      <p class="section-intro">I’m always interested in thoughtful analytics work and useful BI products.</p>
+    </div>
+  </div>
+  <div class="contact-links">
+    <a href="mailto:{{ site.author.email }}"><span>Email</span><strong>{{ site.author.email }}</strong><span aria-hidden="true">↗</span></a>
+    <a href="{{ site.social.github }}"><span>GitHub</span><strong>@username</strong><span aria-hidden="true">↗</span></a>
+    <a href="{{ site.social.linkedin }}"><span>LinkedIn</span><strong>/in/username</strong><span aria-hidden="true">↗</span></a>
+    {% if site.social.resume != empty %}<a href="{{ site.social.resume | relative_url }}"><span>Résumé</span><strong>Download PDF</strong><span aria-hidden="true">↓</span></a>{% endif %}
+  </div>
+</section>
