@@ -42,7 +42,7 @@ body::before {
   inset: 0;
   background-image: radial-gradient(circle, color-mix(in srgb, var(--accent) 45%, transparent) 1px, transparent 1.3px);
   background-size: 22px 22px;
-  opacity: 0.8;
+  opacity: 0.3;
   content: "";
   pointer-events: none;
 }
@@ -181,12 +181,22 @@ em {
   width: 2.1rem;
   height: 2.1rem;
   place-items: center;
-  border-radius: 50%;
-  background: var(--accent);
-  color: var(--paper);
-  font-family: var(--body-font);
-  font-size: 0.75rem;
-  letter-spacing: 0;
+  color: var(--accent);
+}
+
+.wordmark-mark svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.wordmark-mark circle {
+  fill: currentColor;
+  stroke: none;
 }
 
 .nav-list {
