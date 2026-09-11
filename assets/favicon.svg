@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Observed data point">
   <style>
-    .paper { fill: #f4f2ea; }
-    .mark { fill: none; stroke: #476b5c; }
-    .point { fill: #476b5c; }
+    .paper { fill: #f3f6f2; }
+    .mark { fill: none; stroke: #147a72; }
+    .point { fill: #147a72; }
     @media (prefers-color-scheme: dark) {
-      .paper { fill: #18211d; }
-      .mark { stroke: #8fb3a2; }
-      .point { fill: #8fb3a2; }
+      .paper { fill: #16211f; }
+      .mark { stroke: #65c7bb; }
+      .point { fill: #65c7bb; }
     }
   </style>
   <rect class="paper" width="64" height="64" rx="12"/>

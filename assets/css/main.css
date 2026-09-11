@@ -2,10 +2,11 @@
 ---
 
 :root {
-  --paper: #f4f2ea;
-  --ink: #27312d;
-  --accent: #476b5c;
-  --paper-deep: color-mix(in srgb, var(--paper) 86%, var(--accent));
+  --paper: #f3f6f2;
+  --ink: #232b29;
+  --accent: #147a72;
+  --accent-soft: #d2eae4;
+  --paper-deep: color-mix(in srgb, var(--accent-soft) 70%, var(--paper));
   --muted: color-mix(in srgb, var(--ink) 70%, var(--paper));
   --line: color-mix(in srgb, var(--ink) 20%, var(--paper));
   --accent-hover: color-mix(in srgb, var(--accent) 82%, var(--ink));
@@ -19,17 +20,19 @@
 }
 
 :root[data-theme="dark"] {
-  --paper: #18211d;
-  --ink: #e4e8e3;
-  --accent: #8fb3a2;
+  --paper: #16211f;
+  --ink: #e4ebe7;
+  --accent: #65c7bb;
+  --accent-soft: #223e39;
   color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --paper: #18211d;
-    --ink: #e4e8e3;
-    --accent: #8fb3a2;
+    --paper: #16211f;
+    --ink: #e4ebe7;
+    --accent: #65c7bb;
+    --accent-soft: #223e39;
     color-scheme: dark;
   }
 }
@@ -844,7 +847,8 @@ em {
   :root {
     --paper: #fff;
     --ink: #111;
-    --accent: #476b5c;
+    --accent: #147a72;
+    --accent-soft: #d2eae4;
     color-scheme: light;
   }
 
