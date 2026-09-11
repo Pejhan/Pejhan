@@ -1,62 +1,60 @@
-# Data & BI portfolio
+# Pezhman Aliabadi — Data & BI Portfolio
 
-A lightweight Jekyll portfolio for a data analyst and BI developer. It is designed for a GitHub user site and includes structured project data, Markdown posts, an Atom feed, a sitemap, and a custom 404 page.
+Welcome! 👋 This repository powers [pejhan.ir](https://pejhan.ir), a focused portfolio about turning raw data into useful, trustworthy decisions.
 
-## Personalize it
+## 🗺️ Site map
 
-Before publishing, replace the example values in `_config.yml`, especially:
+### 🏠 Home — `/`
 
-- `url` with `https://<username>.github.io` or your verified custom domain;
-- the name, initials, location, email, biography, and social links;
-- the sample project records in `_data/projects.yml`;
-- the sample About copy and `@username` labels in `index.html`;
-- `assets/favicon.svg` with your initials or mark.
+The homepage is the main route through the portfolio. It introduces Pezhman’s work as a Data Analyst and BI Developer and connects visitors to selected projects, writing, background, contact details, and—when available—the résumé.
 
-Set `social.resume` to a site-relative path such as `/assets/resume.pdf` when a résumé is available. Empty project links and the empty résumé link are intentionally not rendered.
+### 📄 Résumé — planned
 
-## Preview locally
+A downloadable résumé is not published yet. When added, it will be linked from the homepage contact section through the `social.resume` setting in `_config.yml`.
 
-Ruby is not required to publish through GitHub Pages, but it is useful for local previews. After installing Ruby and Bundler:
+### 📊 Projects — `/#work`
 
-```sh
-bundle install
-bundle exec jekyll serve --livereload
+The selected-work section currently contains three illustrative case studies:
+
+- **Sales Performance Dashboard** — Power BI, DAX, and SQL analysis of revenue, targets, regions, and products.
+- **Customer Churn Analysis** — Python-based cohort analysis of customer behavior and early churn signals.
+- **Analytics Data Warehouse** — dimensional modeling and ETL work designed to create consistent reporting definitions.
+
+Project content is maintained in `_data/projects.yml`. The current entries are samples and will be replaced or expanded with finished portfolio work.
+
+### ✍️ Posts — `/writing/`
+
+The writing archive collects practical notes about analytics, business intelligence, data modeling, and dashboard design.
+
+Current article:
+
+- **Building a dashboard people trust** — a practical framework for moving from a reporting request to a dependable decision-making tool.
+
+Posts live in `_posts/` and automatically appear on the homepage, writing archive, feed, and sitemap.
+
+### 👤 About — `/#about`
+
+A short overview of Pezhman’s approach and core capabilities across analysis, data modeling, visualization, and stakeholder collaboration.
+
+### 💬 Contact — `/#contact`
+
+Direct links to email, GitHub, LinkedIn, and eventually the downloadable résumé.
+
+## 🔎 Supporting routes
+
+- **RSS/Atom feed:** `/feed.xml`
+- **XML sitemap:** `/sitemap.xml`
+- **Custom not-found page:** `/404.html`
+
+## 🧱 Content at a glance
+
+```text
+Home
+├── Selected projects
+├── Recent posts
+├── About and capabilities
+└── Contact and résumé link
+
+Writing
+└── Individual article pages
 ```
-
-Open `http://localhost:4000`.
-
-## Publish as a GitHub user site
-
-1. Create a public GitHub repository named exactly `<username>.github.io`.
-2. Commit these files to the repository's `main` branch and push them.
-3. In **Settings → Pages**, choose **Deploy from a branch**, then **main** and **/(root)**.
-4. Wait for the deployment shown in the repository's Pages settings, then visit `https://<username>.github.io`.
-
-This repository is separate from the `<username>` repository that renders a profile README.
-
-## Add a custom domain later
-
-Do not add a `CNAME` file containing an example domain. When the real domain is ready:
-
-1. Verify it in your GitHub account under **Settings → Pages**.
-2. In this repository, open **Settings → Pages**, enter the domain under **Custom domain**, and save. GitHub will add the correct `CNAME` file when deploying from a branch.
-3. For an apex domain, add GitHub Pages' current `A` records with the DNS provider. Point `www` to `<username>.github.io` with a `CNAME` record.
-4. Enable **Enforce HTTPS** after the certificate becomes available.
-
-Always confirm the current DNS values in [GitHub's custom domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) before changing DNS.
-
-## Add writing
-
-Create a file in `_posts` named `YYYY-MM-DD-short-title.md`:
-
-```yaml
----
-title: "Article title"
-description: "Short summary"
-date: 2026-01-01
-tags: [power-bi, sql]
----
-```
-
-Posts appear automatically on the homepage, writing archive, sitemap, and feed.
-
