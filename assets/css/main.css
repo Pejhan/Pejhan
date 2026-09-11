@@ -2,14 +2,13 @@
 ---
 
 :root {
-  --paper: #f4f1e9;
-  --paper-deep: #ebe6da;
-  --ink: #202523;
-  --muted: #666b66;
-  --line: #cfc9bc;
-  --blue: #173f5f;
-  --blue-bright: #1f638e;
-  --white: #fffdf8;
+  --paper: #f4f2ea;
+  --ink: #27312d;
+  --accent: #476b5c;
+  --paper-deep: color-mix(in srgb, var(--paper) 86%, var(--accent));
+  --muted: color-mix(in srgb, var(--ink) 70%, var(--paper));
+  --line: color-mix(in srgb, var(--ink) 20%, var(--paper));
+  --accent-hover: color-mix(in srgb, var(--accent) 82%, var(--ink));
   --max-width: 76rem;
   --narrow-width: 48rem;
   --heading-font: "Plein", ui-sans-serif, system-ui, sans-serif;
@@ -41,15 +40,16 @@ body::before {
   position: fixed;
   z-index: -1;
   inset: 0;
-  background-image: radial-gradient(rgba(32, 37, 35, 0.045) 0.6px, transparent 0.6px);
-  background-size: 5px 5px;
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--accent) 45%, transparent) 1px, transparent 1.3px);
+  background-size: 22px 22px;
+  opacity: 0.8;
   content: "";
   pointer-events: none;
 }
 
 ::selection {
-  background: var(--blue);
-  color: var(--white);
+  background: var(--accent);
+  color: var(--paper);
 }
 
 a {
@@ -59,13 +59,13 @@ a {
 }
 
 a:hover {
-  color: var(--blue-bright);
+  color: var(--accent-hover);
 }
 
 a:focus-visible,
 button:focus-visible {
   border-radius: 0.15rem;
-  outline: 3px solid var(--blue-bright);
+  outline: 3px solid var(--accent-hover);
   outline-offset: 4px;
 }
 
@@ -103,7 +103,7 @@ h3 {
 }
 
 em {
-  color: var(--blue);
+  color: var(--accent);
   font-weight: inherit;
 }
 
@@ -135,12 +135,12 @@ em {
   left: 0.75rem;
   padding: 0.7rem 1rem;
   background: var(--ink);
-  color: var(--white);
+  color: var(--paper);
   transform: translateY(-160%);
 }
 
 .skip-link:focus {
-  color: var(--white);
+  color: var(--paper);
   transform: translateY(0);
 }
 
@@ -148,8 +148,8 @@ em {
   position: sticky;
   z-index: 10;
   top: 0;
-  border-bottom: 1px solid rgba(32, 37, 35, 0.18);
-  background: rgba(244, 241, 233, 0.94);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
   backdrop-filter: blur(12px);
 }
 
@@ -182,7 +182,7 @@ em {
   height: 2.1rem;
   place-items: center;
   border-radius: 50%;
-  background: var(--blue);
+  background: var(--accent);
   color: var(--paper);
   font-family: var(--body-font);
   font-size: 0.75rem;
@@ -217,7 +217,7 @@ em {
 .kicker,
 .writing-meta,
 .signal-label {
-  color: var(--blue);
+  color: var(--accent);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -227,7 +227,7 @@ em {
 .hero-deck,
 .post-deck {
   max-width: 38rem;
-  color: #454b47;
+  color: var(--muted);
   font-family: var(--body-font);
   font-size: clamp(1.25rem, 2.2vw, 1.65rem);
   line-height: 1.45;
@@ -246,18 +246,18 @@ em {
   padding: 0.75rem 1.15rem;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--blue);
+  border: 1px solid var(--accent);
   text-decoration: none;
 }
 
 .button-primary {
-  background: var(--blue);
-  color: var(--white);
+  background: var(--accent);
+  color: var(--paper);
 }
 
 .button-primary:hover {
-  background: var(--blue-bright);
-  color: var(--white);
+  background: var(--accent-hover);
+  color: var(--paper);
 }
 
 .text-link {
@@ -279,7 +279,7 @@ em {
   width: 0.65rem;
   height: 0.65rem;
   border-radius: 50%;
-  background: var(--blue-bright);
+  background: var(--accent-hover);
   content: "";
 }
 
@@ -333,11 +333,30 @@ em {
   gap: 2rem;
 }
 
+.section-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  color: var(--accent);
+}
+
 .section-number {
   margin: 0;
-  color: var(--blue);
+  color: var(--accent);
   font-family: var(--body-font);
   font-size: 1.25rem;
+}
+
+.section-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.8;
 }
 
 .section-intro {
@@ -417,7 +436,7 @@ em {
 .tag-list li {
   padding: 0.3rem 0.55rem;
   background: var(--paper-deep);
-  color: #4d534f;
+  color: var(--muted);
   font-size: 0.72rem;
   font-weight: 700;
 }
@@ -606,9 +625,9 @@ em {
 
 .prose blockquote {
   padding: 1rem 1.25rem;
-  border-left: 3px solid var(--blue);
+  border-left: 3px solid var(--accent);
   background: var(--paper-deep);
-  color: #4c514d;
+  color: var(--muted);
 }
 
 .prose blockquote p:last-child,
@@ -696,6 +715,17 @@ em {
     gap: 1rem;
   }
 
+  .section-marker {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
   .writing-item {
     grid-template-columns: 1fr;
     gap: 0;
@@ -737,7 +767,7 @@ em {
   }
 
   body {
-    background: #fff;
+    background: var(--paper);
   }
 
   .section,
