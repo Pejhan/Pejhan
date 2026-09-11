@@ -208,7 +208,7 @@ em {
 }
 
 .nav-list a {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.11em;
   text-decoration: none;
@@ -462,6 +462,12 @@ em {
   margin-bottom: 0.65rem;
 }
 
+.writing-item h3,
+.archive-item h2,
+.post-header h1 {
+  font-weight: 500;
+}
+
 .writing-item h3 a,
 .archive-item h2 a {
   text-decoration: none;
@@ -699,7 +705,7 @@ em {
   }
 
   .nav-list a {
-    font-size: 0.65rem;
+    font-size: 0.72rem;
   }
 
   .hero-actions,
