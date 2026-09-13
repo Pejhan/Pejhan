@@ -1,0 +1,44 @@
+---
+layout: default
+title: Case notes
+description: "All data case notes, including their questions, inputs, approaches, and limitations."
+permalink: /work/
+---
+<section class="page-hero shell narrow">
+  <p class="kicker">Case notes</p>
+  <h1>Problems, approaches, and what I learned.</h1>
+  <p class="hero-deck">The complete collection, shown vertically with the context behind each example.</p>
+</section>
+
+<section class="shell narrow archive" aria-labelledby="projects-title">
+  <h2 class="visually-hidden" id="projects-title">All case notes</h2>
+  {% for project in site.data.projects %}
+  <article class="archive-item detailed-project" id="project-{{ forloop.index }}">
+    <header class="project-header">
+      <div>
+        <p class="kicker">{{ project.eyebrow }}</p>
+        <h2>{{ project.title }}</h2>
+      </div>
+      {% if project.placeholder %}<span class="status">Working example</span>{% endif %}
+    </header>
+    <p class="project-question">{{ project.question }}</p>
+    <dl class="project-details">
+      <div><dt>Data</dt><dd>{{ project.dataset }}</dd></div>
+      <div><dt>Approach</dt><dd>{{ project.approach }}</dd></div>
+      <div><dt>Notes</dt><dd>{{ project.result }}</dd></div>
+    </dl>
+    <div class="project-footer">
+      <ul class="tag-list" aria-label="Tools used">
+        {% for tool in project.tools %}<li>{{ tool }}</li>{% endfor %}
+      </ul>
+      {% if project.case_study_url != empty or project.repository_url != empty or project.live_url != empty %}
+      <div class="project-links">
+        {% if project.case_study_url != empty %}<a href="{{ project.case_study_url }}">Case notes</a>{% endif %}
+        {% if project.repository_url != empty %}<a href="{{ project.repository_url }}">Repository</a>{% endif %}
+        {% if project.live_url != empty %}<a href="{{ project.live_url }}">Live report</a>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</section>

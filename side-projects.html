@@ -1,0 +1,28 @@
+---
+layout: default
+title: Side projects
+description: "Small software, experiments, and projects beyond my data work."
+permalink: /side-projects/
+---
+<section class="page-hero shell narrow">
+  <p class="kicker">Side projects</p>
+  <h1>Other things I make.</h1>
+  <p class="hero-deck">Small tools, browser experiments, and ideas that follow a different thread.</p>
+</section>
+
+<section class="shell narrow archive" aria-labelledby="side-projects-title">
+  <h2 class="visually-hidden" id="side-projects-title">All side projects</h2>
+  {% for project in site.data.side_projects %}
+  <article class="archive-item" id="side-project-{{ forloop.index }}">
+    <p class="kicker">{{ project.eyebrow }}</p>
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.description }}</p>
+    {% if project.repository_url != empty or project.live_url != empty %}
+    <div class="project-links">
+      {% if project.repository_url != empty %}<a href="{{ project.repository_url }}">Repository</a>{% endif %}
+      {% if project.live_url != empty %}<a href="{{ project.live_url }}">Live project</a>{% endif %}
+    </div>
+    {% endif %}
+  </article>
+  {% endfor %}
+</section>

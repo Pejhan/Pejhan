@@ -1,0 +1,11 @@
+- title: "Tools for everyday friction"
+  eyebrow: "Small software"
+  description: "Focused utilities and interfaces built around a recurring annoyance, a missing shortcut, or a better way to do one thing."
+  repository_url: ""
+  live_url: ""
+
+- title: "Ideas worth trying"
+  eyebrow: "Experiments"
+  description: "Prototypes and browser-based explorations made to learn how something works, without needing to turn it into a data project."
+  repository_url: ""
+  live_url: ""

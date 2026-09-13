@@ -1,5 +1,5 @@
 title: "Pezhman Aliabadi — Notes on Data"
-description: "Notes on data analysis, reporting, and the practical problems that appear along the way."
+description: "Notes on data analysis, reporting, practical problems, and projects beyond the data work."
 url: "https://pejhan.ir"
 baseurl: ""
 lang: en
@@ -9,9 +9,8 @@ author:
   name: "Pezhman Aliabadi"
   initials: "PA"
   role: "Data Analyst & BI Developer"
-  location: "Shiraz"
   email: "pjmn.albd@gmail.com"
-  bio: "I use this site to document questions, trade-offs, and lessons from working with data and reporting."
+  bio: "I document questions, trade-offs, and lessons from data work here, alongside a few projects that follow other curiosities."
 
 social:
   github: "https://github.com/pejhan"
