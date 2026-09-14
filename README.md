@@ -10,7 +10,7 @@ The homepage introduces the notebook and points toward case notes, writing, back
 
 ### 📄 Résumé — planned
 
-A downloadable résumé is not published yet. When it is ready, it will be linked from the contact section through the `social.resume` setting in `_config.yml`.
+A downloadable résumé is not published yet. When it is ready, it will be linked from the About and contact panel through the `social.resume` setting in `_config.yml`.
 
 ### 📊 Case notes — `/#work`
 
@@ -32,13 +32,9 @@ Current note:
 
 Posts live in `_posts/` and automatically appear on the homepage, writing archive, feed, and sitemap.
 
-### 👤 Context — `/#about`
+### 👤 About and contact — `/#about`
 
-A short explanation of who is keeping these notes, the tools involved, and the subjects still being learned.
-
-### 💬 Contact — `/#contact`
-
-Links for email, GitHub, LinkedIn, and eventually the downloadable résumé.
+A short explanation of who is keeping these notes, the tools involved, the subjects still being learned, and links for email and social profiles. The nested `/#contact` anchor remains available for direct links to the profile panel.
 
 ## 🔎 Supporting routes
 
@@ -52,8 +48,7 @@ Links for email, GitHub, LinkedIn, and eventually the downloadable résumé.
 Home
 ├── Case notes
 ├── Recent writing
-├── Context
-└── Contact and résumé link
+└── About, contact, and résumé link
 
 Writing
 └── Individual note pages

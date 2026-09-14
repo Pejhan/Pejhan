@@ -140,43 +140,39 @@ description: "Notes on data analysis, reporting, lessons from practical work, an
   <div class="section-heading">
     <div class="section-marker" aria-hidden="true">
       <p class="section-number">04</p>
-      <i class="section-icon" data-lucide="briefcase-business"></i>
+      <i class="section-icon" data-lucide="contact"></i>
     </div>
     <div>
-      <p class="kicker">About</p>
+      <p class="kicker">About &amp; contact</p>
       <h2 id="about-title">A little context.</h2>
     </div>
   </div>
-  <div class="about-grid">
-    <div class="about-copy">
-      <p>I work with analysis and business intelligence. Most of the interesting parts happen before a chart is finished: understanding the question, checking what the data can support, and deciding what should remain uncertain.</p>
-      <p>This site is where I keep examples and notes from that process. It also leaves room for side projects that come from a different kind of curiosity. None of them are final answers—just records of what I tried, what worked, and what I would reconsider.</p>
+  <div class="about-contact-grid">
+    <div class="about-details">
+      <div class="about-copy">
+        <p>I work with analysis and business intelligence. Most of the interesting parts happen before a chart is finished: understanding the question, checking what the data can support, and deciding what should remain uncertain.</p>
+        <p>This site is where I keep examples and notes from that process. It also leaves room for side projects that come from a different kind of curiosity. None of them are final answers—just records of what I tried, what worked, and what I would reconsider.</p>
+      </div>
+      <dl class="capability-list">
+        <div><dt>Often using</dt><dd>SQL · Python · statistics</dd></div>
+        <div><dt>Working with</dt><dd>Star schemas · DAX · ETL</dd></div>
+        <div><dt>Thinking about</dt><dd>Power BI · dashboards · explanation</dd></div>
+        <div><dt>Still learning</dt><dd>Requirements · documentation · communication</dd></div>
+      </dl>
     </div>
-    <dl class="capability-list">
-      <div><dt>Often using</dt><dd>SQL · Python · statistics</dd></div>
-      <div><dt>Working with</dt><dd>Star schemas · DAX · ETL</dd></div>
-      <div><dt>Thinking about</dt><dd>Power BI · dashboards · explanation</dd></div>
-      <div><dt>Still learning</dt><dd>Requirements · documentation · communication</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="section contact-section shell snap-section" id="contact" aria-labelledby="contact-title">
-  <div class="section-heading">
-    <div class="section-marker" aria-hidden="true">
-      <p class="section-number">05</p>
-      <i class="section-icon" data-lucide="message-square"></i>
-    </div>
-    <div>
-      <p class="kicker">Contact</p>
-      <h2 id="contact-title">If any of this overlaps with your work.</h2>
-      <p class="section-intro">I am happy to compare notes, hear another perspective, or talk through a data problem.</p>
-    </div>
-  </div>
-  <div class="contact-links">
-    <a href="mailto:{{ site.author.email }}"><span>Email</span><strong>{{ site.author.email }}</strong><span aria-hidden="true">↗</span></a>
-    <a href="{{ site.social.github }}"><span>GitHub</span><strong>@pejhan</strong><span aria-hidden="true">↗</span></a>
-    <a href="{{ site.social.linkedin }}"><span>LinkedIn</span><strong>/in/pejhan</strong><span aria-hidden="true">↗</span></a>
-    {% if site.social.resume != empty %}<a href="{{ site.social.resume | relative_url }}"><span>Résumé</span><strong>Download PDF</strong><span aria-hidden="true">↓</span></a>{% endif %}
+    <aside class="profile-card" id="contact" aria-label="Profile and contact links">
+      <img class="profile-photo" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of {{ site.author.name }}" width="400" height="400" loading="lazy">
+      <div class="profile-identity">
+        <strong>{{ site.author.name }}</strong>
+        <span>{{ site.author.role }}</span>
+      </div>
+      <nav class="social-links" aria-label="Social profiles and contact">
+        <a href="{{ site.social.github }}" target="_blank" rel="me noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i><span><small>GitHub</small><strong>@pejhan</strong></span><span aria-hidden="true">↗</span></a>
+        <a href="{{ site.social.linkedin }}" target="_blank" rel="me noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i><span><small>LinkedIn</small><strong>/in/pejhan</strong></span><span aria-hidden="true">↗</span></a>
+        <a href="{{ site.social.telegram }}" target="_blank" rel="me noopener noreferrer"><i data-lucide="send" aria-hidden="true"></i><span><small>Telegram</small><strong>@pejhan</strong></span><span aria-hidden="true">↗</span></a>
+        <a href="mailto:{{ site.author.email }}"><i data-lucide="mail" aria-hidden="true"></i><span><small>Email</small><strong>{{ site.author.email }}</strong></span><span aria-hidden="true">↗</span></a>
+        {% if site.social.resume != empty %}<a href="{{ site.social.resume | relative_url }}"><i data-lucide="file-down" aria-hidden="true"></i><span><small>Résumé</small><strong>Download PDF</strong></span><span aria-hidden="true">↓</span></a>{% endif %}
+      </nav>
+    </aside>
   </div>
 </section>

@@ -32,9 +32,9 @@
 
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
-    <link rel="preconnect" href="https://api.fontshare.com">
-    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800&amp;f[]=plein@400,500&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Ubuntu:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   </head>
   <body{% if page.url == '/' %} class="home-page"{% endif %}>
@@ -53,8 +53,7 @@
             <li><a href="#work">Case notes</a></li>
             <li><a href="#side-projects">Side projects</a></li>
             <li><a href="#writing">Writing</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About &amp; contact</a></li>
           </ul>
         </nav>
         {% else %}
@@ -63,8 +62,7 @@
             <li><a href="{{ '/' | relative_url }}#work">Case notes</a></li>
             <li><a href="{{ '/' | relative_url }}#side-projects">Side projects</a></li>
             <li><a href="{{ '/' | relative_url }}#writing">Writing</a></li>
-            <li><a href="{{ '/' | relative_url }}#about">Context</a></li>
-            <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
+            <li><a href="{{ '/' | relative_url }}#about">About &amp; contact</a></li>
           </ul>
         </nav>
         {% endif %}
@@ -121,6 +119,7 @@
             .map((link) => document.querySelector(link.getAttribute("href")))
             .filter(Boolean);
           const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+          const portraitLayout = window.matchMedia("(max-width: 52rem) and (orientation: portrait)");
           let activeIndex = Math.max(0, sections.findIndex((section) => "#" + section.id === window.location.hash));
           let navigationLocked = false;
           let touchStartY = 0;
@@ -160,17 +159,23 @@
 
           sections.forEach((section) => observer.observe(section));
           links.forEach((link, index) => link.addEventListener("click", (event) => {
+            if (portraitLayout.matches) {
+              setActiveSection(sections[index].id);
+              return;
+            }
             event.preventDefault();
             goToSection(index);
           }));
 
           window.addEventListener("wheel", (event) => {
+            if (portraitLayout.matches) return;
             if (Math.abs(event.deltaY) < 8 || Math.abs(event.deltaY) < Math.abs(event.deltaX)) return;
             event.preventDefault();
             if (!navigationLocked) goToSection(activeIndex + (event.deltaY > 0 ? 1 : -1));
           }, { passive: false });
 
           window.addEventListener("keydown", (event) => {
+            if (portraitLayout.matches) return;
             if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
             if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) return;
 
@@ -190,10 +195,11 @@
           }, { passive: true });
 
           window.addEventListener("touchmove", (event) => {
-            if (event.touches.length === 1) event.preventDefault();
+            if (!portraitLayout.matches && event.touches.length === 1) event.preventDefault();
           }, { passive: false });
 
           window.addEventListener("touchend", (event) => {
+            if (portraitLayout.matches) return;
             const distance = touchStartY - event.changedTouches[0].clientY;
             if (Math.abs(distance) >= 40 && !navigationLocked) {
               goToSection(activeIndex + (distance > 0 ? 1 : -1));
