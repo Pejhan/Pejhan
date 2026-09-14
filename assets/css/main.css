@@ -753,6 +753,33 @@ em {
   stroke-width: 1.8;
 }
 
+.social-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  background: var(--accent);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+.social-icon-github {
+  mask-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/github.svg");
+  -webkit-mask-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/github.svg");
+}
+
+.social-icon-linkedin {
+  mask-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/linkedin.svg");
+  -webkit-mask-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/linkedin.svg");
+}
+
+.social-icon-telegram {
+  mask-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/telegram.svg");
+  -webkit-mask-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/telegram.svg");
+}
+
 .social-links a > span:nth-child(2) {
   display: grid;
   min-width: 0;

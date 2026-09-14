@@ -122,6 +122,7 @@
           const portraitLayout = window.matchMedia("(max-width: 52rem) and (orientation: portrait)");
           let activeIndex = Math.max(0, sections.findIndex((section) => "#" + section.id === window.location.hash));
           let navigationLocked = false;
+          let scrollFrame = null;
           let touchStartY = 0;
 
           const setActiveSection = (id) => {
@@ -135,29 +136,59 @@
             activeIndex = sections.findIndex((section) => section.id === id);
           };
 
-          const goToSection = (nextIndex, updateHistory = true) => {
+          const sectionAtViewportAnchor = () => {
+            const anchorY = window.innerHeight * (portraitLayout.matches ? 0.42 : 0.5);
+            const containingAnchor = sections.find((section) => {
+              const bounds = section.getBoundingClientRect();
+              return bounds.top <= anchorY && bounds.bottom > anchorY;
+            });
+
+            if (containingAnchor) return containingAnchor;
+
+            return sections.reduce((closest, section) => {
+              const bounds = section.getBoundingClientRect();
+              const distance = Math.abs((bounds.top + bounds.bottom) / 2 - anchorY);
+              return !closest || distance < closest.distance ? { section, distance } : closest;
+            }, null).section;
+          };
+
+          const syncSectionFromViewport = (updateHistory = true) => {
+            const visibleSection = sectionAtViewportAnchor();
+            if (!visibleSection || visibleSection.id === sections[activeIndex]?.id) return;
+
+            setActiveSection(visibleSection.id);
+            if (updateHistory && window.location.hash !== "#" + visibleSection.id) {
+              history.replaceState(null, "", "#" + visibleSection.id);
+            }
+          };
+
+          const scheduleSectionSync = () => {
+            if (scrollFrame !== null) return;
+            scrollFrame = window.requestAnimationFrame(() => {
+              scrollFrame = null;
+              syncSectionFromViewport();
+            });
+          };
+
+          const goToSection = (nextIndex) => {
             const boundedIndex = Math.max(0, Math.min(sections.length - 1, nextIndex));
             if (boundedIndex === activeIndex && navigationLocked) return;
 
             navigationLocked = true;
             const target = sections[boundedIndex];
-            setActiveSection(target.id);
             target.scrollIntoView({
               behavior: reduceMotion.matches ? "auto" : "smooth",
               block: "start"
             });
-            if (updateHistory) history.replaceState(null, "", "#" + target.id);
-            window.setTimeout(() => { navigationLocked = false; }, reduceMotion.matches ? 100 : 850);
+            scheduleSectionSync();
+            window.setTimeout(() => {
+              navigationLocked = false;
+              syncSectionFromViewport();
+            }, reduceMotion.matches ? 100 : 850);
           };
 
-          const observer = new IntersectionObserver((entries) => {
-            const visible = entries
-              .filter((entry) => entry.isIntersecting)
-              .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-            if (visible) setActiveSection(visible.target.id);
-          }, { rootMargin: "-20% 0px -45%", threshold: [0, 0.25, 0.5, 0.75] });
-
-          sections.forEach((section) => observer.observe(section));
+          window.addEventListener("scroll", scheduleSectionSync, { passive: true });
+          window.addEventListener("resize", scheduleSectionSync);
           links.forEach((link, index) => link.addEventListener("click", (event) => {
             if (portraitLayout.matches) {
               setActiveSection(sections[index].id);

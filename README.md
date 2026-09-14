@@ -34,7 +34,7 @@ Posts live in `_posts/` and automatically appear on the homepage, writing archiv
 
 ### 👤 About and contact — `/#about`
 
-A short explanation of who is keeping these notes, the tools involved, the subjects still being learned, and links for email and social profiles. The nested `/#contact` anchor remains available for direct links to the profile panel.
+A short explanation of who is keeping these notes, the tools involved, the subjects still being learned, and links to social profiles. The nested `/#contact` anchor remains available for direct links to the profile panel.
 
 ## 🔎 Supporting routes
 
