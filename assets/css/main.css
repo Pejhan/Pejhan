@@ -179,8 +179,8 @@ em {
   z-index: 10;
   top: 0;
   border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--paper) 94%, transparent);
-  backdrop-filter: blur(12px);
+  background: var(--paper);
+  box-shadow: 0 0.4rem 1.5rem color-mix(in srgb, var(--ink) 10%, transparent);
 }
 
 .header-inner,
@@ -254,9 +254,6 @@ em {
   position: fixed;
   right: 0;
   left: 0;
-  border-bottom: 0;
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--paper) 96%, transparent), transparent);
-  backdrop-filter: none;
   pointer-events: none;
 }
 
@@ -271,6 +268,11 @@ em {
   z-index: 20;
   top: 50%;
   right: clamp(0.75rem, 2vw, 2rem);
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-soft);
+  background: var(--paper);
+  box-shadow: 0 0.4rem 1.5rem color-mix(in srgb, var(--ink) 10%, transparent);
   transform: translateY(-50%);
 }
 
@@ -360,7 +362,7 @@ em {
   height: 100svh;
   min-height: 100svh;
   max-height: 100svh;
-  padding-right: clamp(6rem, 10vw, 9rem);
+  padding-right: clamp(10.25rem, 16vw, 13rem);
   overflow: hidden;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -816,12 +818,12 @@ em {
 }
 
 .home-page .hero {
-  padding-block: 4.75rem 2rem;
+  padding-block: 6rem 2rem;
 }
 
 .home-page .section {
   display: flex;
-  padding-block: clamp(4.75rem, 7svh, 6rem) clamp(2rem, 5svh, 4rem);
+  padding-block: max(6rem, 7svh) clamp(2rem, 5svh, 4rem);
   flex-direction: column;
   justify-content: center;
 }
@@ -1143,7 +1145,7 @@ em {
   }
 
   .home-page .snap-section {
-    padding-right: 6.5rem;
+    padding-right: 8.5rem;
   }
 
   .home-page .section-heading {
@@ -1217,7 +1219,7 @@ em {
 
 @media (max-height: 44rem) {
   .home-page .section {
-    padding-block: 4.5rem 1.25rem;
+    padding-block: 6rem 1.25rem;
   }
 
   .home-page .section-heading {
@@ -1259,9 +1261,6 @@ em {
 
   .home-page .site-header {
     position: sticky;
-    border-bottom: 1px solid var(--line);
-    background: color-mix(in srgb, var(--paper) 96%, transparent);
-    backdrop-filter: blur(12px);
     pointer-events: auto;
   }
 
@@ -1287,6 +1286,10 @@ em {
   .home-page .section-nav {
     position: static;
     width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
     transform: none;
     grid-column: 1 / -1;
     grid-row: 2;
