@@ -369,13 +369,17 @@ em {
 }
 
 .kicker,
-.writing-meta,
-.signal-label {
+.writing-meta {
   color: var(--accent);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+#hero-title {
+  max-width: 20ch;
+  font-size: clamp(2rem, min(4vw, 7svh), 3.6rem);
 }
 
 .hero-deck,
@@ -420,29 +424,59 @@ em {
   text-decoration-color: var(--line);
 }
 
-.signal-card {
-  position: relative;
-  padding: 1.5rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-soft);
-  background: color-mix(in srgb, var(--paper) 94%, var(--accent));
+.constellation {
+  width: 100%;
+  max-width: 30rem;
+  justify-self: center;
+  color: var(--accent);
+  background: radial-gradient(ellipse, color-mix(in srgb, var(--accent) 7%, transparent), transparent 68%);
 }
 
-
-.signal-value {
-  margin: 1.5rem 0 2.5rem;
-  font-family: var(--body-font);
-  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
-  line-height: 1.15;
+.constellation-sky {
+  display: block;
+  width: 100%;
+  max-height: 58svh;
+  overflow: visible;
 }
 
-.signal-list,
+.constellation-links {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.65;
+  opacity: 0.14;
+}
+
+.constellation-rays {
+  pointer-events: none;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.constellation-star {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.constellation-star-core {
+  transition: opacity 200ms ease;
+}
+
+.constellation-star:hover .constellation-star-core {
+  opacity: 1;
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+.constellation-hit {
+  fill: transparent;
+  stroke: none;
+  pointer-events: all;
+}
+
 .capability-list,
 .project-details {
   margin: 0;
 }
 
-.signal-list > div,
 .capability-list > div {
   display: flex;
   padding-block: 0.7rem;
@@ -451,7 +485,6 @@ em {
   border-top: 1px solid var(--line);
 }
 
-.signal-list dt,
 .capability-list dt,
 .project-details dt {
   color: var(--muted);
@@ -461,7 +494,6 @@ em {
   text-transform: uppercase;
 }
 
-.signal-list dd,
 .capability-list dd,
 .project-details dd {
   margin: 0;
@@ -1039,8 +1071,8 @@ em {
     grid-template-columns: 1fr;
   }
 
-  .signal-card {
-    max-width: 28rem;
+  .constellation {
+    max-width: 24rem;
   }
 
   .project-list,
@@ -1057,9 +1089,7 @@ em {
     gap: 1.5rem;
   }
 
-  .home-page .signal-card {
-    display: none;
-  }
+
 
   .home-page .project-list,
   .home-page .side-project-grid,
@@ -1343,9 +1373,8 @@ em {
     grid-template-columns: 1fr;
   }
 
-  .home-page .signal-card {
-    display: block;
-    max-width: none;
+  .home-page .constellation {
+    max-width: 22rem;
   }
 
   .home-page .section {
@@ -1448,5 +1477,12 @@ em {
   .section,
   .post-header {
     break-inside: avoid;
+  }
+}
+
+@media (max-width: 52rem) and (orientation: landscape) {
+  .home-page .hero {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.75fr);
+    gap: 1.5rem;
   }
 }
