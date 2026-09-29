@@ -444,6 +444,7 @@ em {
   stroke: currentColor;
   stroke-width: 0.65;
   opacity: 0.14;
+  animation: constellation-links-enter 700ms ease-out 650ms both;
 }
 
 .constellation-rays {
@@ -459,6 +460,28 @@ em {
 
 .constellation-star-core {
   transition: opacity 200ms ease;
+}
+
+.constellation-star-entrance {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: constellation-star-enter 750ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms) both;
+}
+
+@keyframes constellation-star-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes constellation-links-enter {
+  from { opacity: 0; }
+  to { opacity: 0.14; }
 }
 
 .constellation-star:hover .constellation-star-core {
@@ -1440,6 +1463,11 @@ em {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .constellation-star-entrance,
+  .constellation-links {
+    animation: none;
+  }
+
   html {
     scroll-behavior: auto;
     scroll-snap-type: none;

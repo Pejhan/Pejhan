@@ -53,7 +53,13 @@
 
     const group = element("g", { class: "constellation-star" }, stars);
     point.group = group;
-    const core = element("g", { class: "constellation-star-core", opacity: 0.4 + point.depth * 0.6 }, group);
+    // Reveal outward from the center, independently of scroll and hover transforms.
+    const revealDelay = 80 + Math.hypot(point.x - 210, point.y - 210) * 2.2;
+    const entrance = element("g", {
+      class: "constellation-star-entrance",
+      style: `--reveal-delay: ${revealDelay}ms`
+    }, group);
+    const core = element("g", { class: "constellation-star-core", opacity: 0.4 + point.depth * 0.6 }, entrance);
     const radius = 3.5 + point.depth * 5;
     element("circle", { cx: point.x, cy: point.y, r: radius + 7, opacity: 0.06 + point.depth * 0.06, stroke: "none" }, core);
     element("circle", { cx: point.x, cy: point.y, r: radius, "stroke-width": 0.6 + point.depth * 1.2 }, core);
