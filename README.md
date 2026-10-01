@@ -23,6 +23,10 @@ Post front matter includes `title`, `description`, `date`, `tags`, `image`, `ima
 
 ## Other content
 
-Side projects are maintained in `_data/side_projects.yml`. Profile and social links are configured in `_config.yml`. A downloadable résumé can be added through `social.resume`.
+Side projects are maintained in `_data/side_projects.yml`. Each has a `slug` matching its Markdown page under `side-projects/`, using `_layouts/project.html`. Cards link to `/side-projects/:slug/`; project pages include the preview image, README documentation, and repository links. Relative README links resolve to their source files on GitHub.
+
+The same top navigation is available on the homepage, archives, blog posts, and project pages. Blog and Side projects open their archives; Introduction and About return to the corresponding homepage section. The navbar highlights the homepage section in view or the active Blog/Side projects page.
+
+Profile and social links are configured in `_config.yml`. A downloadable résumé can be added through `social.resume`.
 
 Supporting routes: `/feed.xml`, `/sitemap.xml`, and `/404.html`.

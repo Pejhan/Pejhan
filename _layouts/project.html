@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{% assign project = site.data.side_projects | where: 'slug', page.project_slug | first %}
+<article class="post project-page shell">
+  <header class="post-header">
+    <a class="back-link" href="{{ '/side-projects/' | relative_url }}">← All side projects</a>
+    <p class="kicker">{{ project.eyebrow }}</p>
+    <h1>{{ project.title | escape }}</h1>
+    <p class="post-deck">{{ project.description }}</p>
+    <div class="project-links">
+      <a href="{{ project.repository_url }}">View repository <span aria-hidden="true">↗</span></a>
+      <a href="{{ project.readme_url }}">Original README <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <figure class="post-cover">
+    <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | escape }}" width="1280" height="720" fetchpriority="high">
+  </figure>
+  <div class="prose">{{ content }}</div>
+  <footer class="post-source">
+    <p>Project documentation from the <a href="{{ project.readme_url }}">README on GitHub</a>.</p>
+    <a class="text-link" href="{{ '/side-projects/' | relative_url }}">← Back to Side projects</a>
+  </footer>
+</article>

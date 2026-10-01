@@ -1,14 +1,15 @@
+{% assign project_url = '/side-projects/' | append: project.slug | append: '/' %}
 <article class="side-project-card" id="side-project-{{ forloop.index }}">
-  <a class="side-project-image-link" href="{{ project.repository_url }}" tabindex="-1" aria-hidden="true">
+  <a class="side-project-image-link" href="{{ project_url | relative_url }}" tabindex="-1" aria-hidden="true">
     <img class="side-project-image" src="{{ project.image | relative_url }}" alt="" width="1280" height="720" loading="lazy">
   </a>
   <div class="side-project-copy">
     <p class="kicker">{{ project.eyebrow }}</p>
-    <h3><a href="{{ project.repository_url }}">{{ project.title | escape }}</a></h3>
+    <h3><a href="{{ project_url | relative_url }}">{{ project.title | escape }}</a></h3>
     <p class="side-project-excerpt">{{ project.description }}</p>
   </div>
   <div class="project-links">
-    <a href="{{ project.repository_url }}">View repository <span aria-hidden="true">↗</span></a>
-    <a href="{{ project.readme_url }}">README <span aria-hidden="true">↗</span></a>
+    <a href="{{ project_url | relative_url }}">Read more <span aria-hidden="true">→</span></a>
+    <a href="{{ project.repository_url }}">Repository <span aria-hidden="true">↗</span></a>
   </div>
 </article>
