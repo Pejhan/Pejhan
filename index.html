@@ -59,9 +59,7 @@ description: "Notes on data analysis, reporting, lessons from practical work, an
     {% include side-project-card.html %}
     {% endfor %}
   </div>
-  {% if site.data.side_projects.size > 3 %}
-  <p class="section-action"><a class="text-link" href="{{ '/side-projects/' | relative_url }}">More&hellip; <span aria-hidden="true">→</span></a></p>
-  {% endif %}
+  <p class="section-action"><a class="text-link" href="{{ site.social.github | append: '?tab=repositories' }}">More Projects <span aria-hidden="true">→</span></a></p>
 </section>
 
 <section class="section shell snap-section" id="about" aria-labelledby="about-title">

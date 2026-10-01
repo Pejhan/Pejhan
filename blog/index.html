@@ -4,8 +4,19 @@ title: Blog
 description: "Articles on SQL, databases, and lessons from working with data."
 permalink: /blog/
 ---
+<section class="page-hero shell narrow archive-heading">
+  <div class="section-marker" aria-hidden="true">
+    <i class="section-icon" data-lucide="file-text"></i>
+  </div>
+  <div>
+    <p class="kicker">Blog</p>
+    <h1>Ideas, code, and things I learned.</h1>
+    <p class="hero-deck">Ideas, practical examples, and lessons from working with data and code.</p>
+  </div>
+</section>
+
 <section class="shell blog-archive archive" aria-labelledby="articles-title">
-  <h1 class="visually-hidden" id="articles-title">All blog posts</h1>
+  <h2 class="visually-hidden" id="articles-title">All blog posts</h2>
   <div class="blog-list">
     {% for post in site.posts %}
     {% include blog-card.html %}

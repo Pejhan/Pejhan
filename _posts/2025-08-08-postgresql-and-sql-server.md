@@ -3,7 +3,7 @@ title: "Six months with PostgreSQL, after years of SQL Server"
 description: "Looking beyond the familiar database stack, and a short video on how PostgreSQL feels alongside SQL Server."
 date: "2025-08-08T20:37:50.224Z"
 tags: ["postgresql","sql-server"]
-image: "/assets/images/blog/postgresql-and-sql-server/cover.jpg"
+image: "/assets/images/blog/postgresql-and-sql-server/cover.png"
 image_width: 758
 image_height: 360
 image_alt: "Still from the PostgreSQL and SQL Server comparison video"

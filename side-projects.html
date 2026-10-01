@@ -4,10 +4,15 @@ title: Side projects
 description: "Small software, experiments, and projects beyond my data work."
 permalink: /side-projects/
 ---
-<section class="page-hero shell narrow">
-  <p class="kicker">Side projects</p>
-  <h1>Other things I make.</h1>
-  <p class="hero-deck">Small tools, browser experiments, and ideas that follow a different thread.</p>
+<section class="page-hero shell narrow archive-heading">
+  <div class="section-marker" aria-hidden="true">
+    <i class="section-icon" data-lucide="code-xml"></i>
+  </div>
+  <div>
+    <p class="kicker">Side projects</p>
+    <h1>Other things I make.</h1>
+    <p class="hero-deck">Small tools, browser experiments, and ideas that follow a different thread.</p>
+  </div>
 </section>
 
 <section class="shell side-project-archive archive" aria-labelledby="side-projects-title">
@@ -17,4 +22,5 @@ permalink: /side-projects/
     {% include side-project-card.html %}
   {% endfor %}
   </div>
+  <p class="section-action"><a class="text-link" href="{{ site.social.github | append: '?tab=repositories' }}">More Projects <span aria-hidden="true">→</span></a></p>
 </section>
