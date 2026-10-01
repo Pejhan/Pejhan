@@ -1,11 +1,34 @@
-- title: "Tools for everyday friction"
-  eyebrow: "Small software"
-  description: "Focused utilities and interfaces built around a recurring annoyance, a missing shortcut, or a better way to do one thing."
-  repository_url: ""
+- title: "Trash Current Track"
+  eyebrow: "Quod Libet plugin"
+  description: >-
+    A Quod Libet plugin that confirms before moving the current track to the trash
+    and removing it from the library. Works with paused tracks; ignores streams
+    and never permanently deletes files.
+  image: "/assets/images/side-projects/trash-current.svg"
+  image_alt: "Enhanced trash icon with a music note and keyboard shortcut keys"
+  repository_url: "https://github.com/Pejhan/quodlibet-trash-current"
+  readme_url: "https://github.com/Pejhan/quodlibet-trash-current#readme"
   live_url: ""
 
-- title: "Ideas worth trying"
-  eyebrow: "Experiments"
-  description: "Prototypes and browser-based explorations made to learn how something works, without needing to turn it into a data project."
-  repository_url: ""
+- title: "Playlist Shortcuts"
+  eyebrow: "Quod Libet plugin"
+  description: >-
+    Add the current Quod Libet track to playlists with global keyboard shortcuts.
+    Tracks can belong to multiple playlists; repeated presses never duplicate
+    or remove them.
+  image: "/assets/images/side-projects/playlist-shortcuts.svg"
+  image_alt: "Enhanced favorite star icon over a playlist with keyboard shortcut keys"
+  repository_url: "https://github.com/Pejhan/quodlibet-playlist-shortcuts"
+  readme_url: "https://github.com/Pejhan/quodlibet-playlist-shortcuts#readme"
+  live_url: ""
+
+- title: "Grabgram"
+  eyebrow: "Desktop app"
+  description: >-
+    Save Telegram videos, audio, photos, and documents with a desktop app that
+    remembers your downloads.
+  image: "/assets/images/side-projects/grabgram.svg"
+  image_alt: "Enhanced Grabgram folded paper plane icon with download progress and media tiles"
+  repository_url: "https://github.com/Pejhan/Grabgram"
+  readme_url: "https://github.com/Pejhan/Grabgram#readme"
   live_url: ""

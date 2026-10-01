@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="preview-title">
+  <title id="preview-title">Playlist Shortcuts — enhanced project icon</title>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1"><stop stop-color="#f4f7f3"/><stop offset="1" stop-color="#f7efdc"/></linearGradient>
+    <linearGradient id="icon-fill" x2="0.8" y2="1"><stop stop-color="#ffdc7b"/><stop offset="1" stop-color="#d6952d"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#fff" stop-opacity="0.85"/><stop offset="1" stop-color="#ffdc7b" stop-opacity="0.15"/></radialGradient>
+    <pattern id="dots" width="38" height="38" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.4" fill="#d6952d" opacity="0.13"/></pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#d6952d" flood-opacity="0.22"/></filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#background)"/>
+  <rect width="1280" height="720" fill="url(#dots)"/>
+  <circle cx="640" cy="330" r="246" fill="url(#halo)" stroke="#d6952d" stroke-opacity="0.1" stroke-width="2"/>
+  <circle cx="640" cy="330" r="276" fill="none" stroke="#d6952d" stroke-opacity="0.14" stroke-width="2" stroke-dasharray="4 15"/>
+  <g fill="#d6952d" opacity="0.35"><circle cx="360" cy="154" r="7"/><circle cx="947" cy="462" r="6"/><circle cx="326" cy="288" r="4"/></g>
+  <g transform="translate(877 207) rotate(10)" fill="none" stroke="#ba883e" stroke-width="8" stroke-linecap="round">
+          <rect x="-24" y="-28" width="172" height="174" rx="28" fill="#fffcf4" stroke="#e4d2af" stroke-width="2"/>
+          <path d="M12 20h98M12 57h98M12 94h63"/>
+        </g><g font-family="ui-monospace, monospace" font-size="24" font-weight="600" text-anchor="middle" fill="#d6952d"><rect x="438.5" y="563" width="155" height="60" rx="16" fill="#fff" fill-opacity="0.85" stroke="#d6952d" stroke-opacity="0.22" stroke-width="2"/><text x="516.0" y="602">CTRL</text><rect x="607.5" y="563" width="135" height="60" rx="16" fill="#fff" fill-opacity="0.85" stroke="#d6952d" stroke-opacity="0.22" stroke-width="2"/><text x="675.0" y="602">ALT</text><rect x="756.5" y="563" width="85" height="60" rx="16" fill="#fff" fill-opacity="0.85" stroke="#d6952d" stroke-opacity="0.22" stroke-width="2"/><text x="799.0" y="602">1</text></g>
+  <g filter="url(#shadow)"><svg xmlns="http://www.w3.org/2000/svg" id="a" width="510" height="510" version="1.1" viewBox="0 0 22 22" x="385.0" y="75.0">
+ <path d="m11 4.1765 2.1531 4.571 4.8146 0.733-3.4839 3.5581 0.82244 5.0242-4.3064-2.372-4.3064 2.372 0.82244-5.0242-3.4839-3.5581 4.8146-0.733z" fill="url(#icon-fill)" stroke="#a97120" stroke-linecap="square" stroke-width="0.45" stroke-linejoin="round" />
+</svg></g>
+</svg>
