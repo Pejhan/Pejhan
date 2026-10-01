@@ -28,7 +28,17 @@
     <meta property="og:description" content="{{ page_description | strip_html | normalize_whitespace | escape }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:site_name" content="{{ site.title | escape }}">
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image | absolute_url }}">
+    <meta property="og:image:alt" content="{{ page.image_alt | default: page.title | escape }}">
+    <meta name="twitter:card" content="summary_large_image">
+    {% else %}
     <meta name="twitter:card" content="summary">
+    {% endif %}
+    {% if page.layout == 'post' %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:author" content="{{ site.author.name | escape }}">
+    {% endif %}
 
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
@@ -50,18 +60,16 @@
         <nav class="section-nav" aria-label="Page sections" data-section-nav>
           <ul class="nav-list">
             <li><a href="#intro" aria-current="true">Introduction</a></li>
-            <li><a href="#work">Case notes</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#side-projects">Side projects</a></li>
-            <li><a href="#writing">Writing</a></li>
             <li><a href="#about">About &amp; contact</a></li>
           </ul>
         </nav>
         {% else %}
         <nav aria-label="Primary navigation">
           <ul class="nav-list">
-            <li><a href="{{ '/' | relative_url }}#work">Case notes</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
             <li><a href="{{ '/' | relative_url }}#side-projects">Side projects</a></li>
-            <li><a href="{{ '/' | relative_url }}#writing">Writing</a></li>
             <li><a href="{{ '/' | relative_url }}#about">About &amp; contact</a></li>
           </ul>
         </nav>

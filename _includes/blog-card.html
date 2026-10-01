@@ -1,0 +1,13 @@
+<article class="blog-item">
+  {% if post.image %}
+  <a class="blog-image-link" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img class="blog-image" src="{{ post.image | relative_url }}" alt="" width="1280" height="720" loading="lazy">
+  </a>
+  {% endif %}
+  <div class="blog-copy">
+    <p class="blog-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time></p>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+    <p>{{ post.description }}</p>
+  </div>
+  <a class="blog-read-link" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">Read post <span aria-hidden="true">→</span></a>
+</article>

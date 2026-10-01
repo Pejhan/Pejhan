@@ -369,7 +369,7 @@ em {
 }
 
 .kicker,
-.writing-meta {
+.blog-meta {
   color: var(--accent);
   font-size: 0.72rem;
   font-weight: 700;
@@ -676,11 +676,11 @@ em {
   color: var(--muted);
 }
 
-.writing-list {
+.blog-list {
   border-top: 1px solid var(--line);
 }
 
-.writing-item {
+.blog-item {
   display: grid;
   padding-block: 2.25rem;
   border-bottom: 1px solid var(--line);
@@ -688,23 +688,23 @@ em {
   gap: 2rem;
 }
 
-.writing-item h3 {
+.blog-item h3 {
   margin-bottom: 0.65rem;
 }
 
-.writing-item h3,
+.blog-item h3,
 .archive-item h2,
 .post-header h1 {
   font-weight: 500;
 }
 
-.writing-item h3 a,
+.blog-item h3 a,
 .archive-item h2 a {
   text-decoration: none;
 }
 
-.writing-item p:not(.writing-meta),
-.archive-item > p:not(.writing-meta) {
+.blog-item p:not(.blog-meta),
+.archive-item > p:not(.blog-meta) {
   max-width: 42rem;
   margin-bottom: 0;
   color: var(--muted);
@@ -898,7 +898,7 @@ em {
 
 .home-page .project-list,
 .home-page .side-project-grid,
-.home-page .writing-list {
+.home-page .blog-list {
   display: grid;
   min-height: 0;
   margin-left: calc(15% + 2rem);
@@ -911,7 +911,7 @@ em {
 
 .home-page .project-card,
 .home-page .side-project-card,
-.home-page .writing-item {
+.home-page .blog-item {
   min-width: 0;
   padding: clamp(1rem, 2.2vw, 1.6rem);
   border: 0;
@@ -919,12 +919,12 @@ em {
 
 .home-page .project-card + .project-card,
 .home-page .side-project-card + .side-project-card,
-.home-page .writing-item + .writing-item {
+.home-page .blog-item + .blog-item {
   border-left: 1px solid var(--line);
 }
 
 .home-page .project-card:last-child,
-.home-page .writing-item {
+.home-page .blog-item {
   border-bottom: 0;
 }
 
@@ -977,12 +977,12 @@ em {
   margin-top: 1rem;
 }
 
-.home-page .writing-item {
+.home-page .blog-item {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto;
 }
 
-.home-page .writing-item p:not(.writing-meta) {
+.home-page .blog-item p:not(.blog-meta) {
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -1116,7 +1116,7 @@ em {
 
   .home-page .project-list,
   .home-page .side-project-grid,
-  .home-page .writing-list,
+  .home-page .blog-list,
   .home-page .about-contact-grid {
     margin-left: 0;
     overflow: hidden;
@@ -1124,7 +1124,7 @@ em {
 
   .home-page .project-list,
   .home-page .side-project-grid,
-  .home-page .writing-list {
+  .home-page .blog-list {
     grid-template-columns: none;
     grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: column;
@@ -1237,7 +1237,7 @@ em {
     height: 2.5rem;
   }
 
-  .writing-item {
+  .blog-item {
     grid-template-columns: 1fr;
     gap: 0;
   }
@@ -1416,7 +1416,7 @@ em {
 
   .home-page .project-list,
   .home-page .side-project-grid,
-  .home-page .writing-list,
+  .home-page .blog-list,
   .home-page .about-contact-grid {
     display: grid;
     margin-left: 0;
@@ -1429,13 +1429,13 @@ em {
 
   .home-page .project-card,
   .home-page .side-project-card,
-  .home-page .writing-item {
+  .home-page .blog-item {
     padding: 1.35rem;
   }
 
   .home-page .project-card + .project-card,
   .home-page .side-project-card + .side-project-card,
-  .home-page .writing-item + .writing-item {
+  .home-page .blog-item + .blog-item {
     border-top: 1px solid var(--line);
     border-left: 0;
   }
@@ -1447,7 +1447,7 @@ em {
 
   .home-page .project-question,
   .home-page .project-details dd,
-  .home-page .writing-item p:not(.writing-meta) {
+  .home-page .blog-item p:not(.blog-meta) {
     display: block;
     overflow: visible;
     -webkit-line-clamp: unset;
@@ -1512,5 +1512,269 @@ em {
   .home-page .hero {
     grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.75fr);
     gap: 1.5rem;
+  }
+}
+
+.blog-list,
+.home-page .blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-flow: row;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-soft);
+  background: var(--paper);
+}
+
+.blog-item,
+.home-page .blog-item {
+  display: flex;
+  min-width: 0;
+  padding: 0;
+  flex-direction: column;
+  gap: 0;
+  border: 0;
+}
+
+.blog-item + .blog-item {
+  border-left: 1px solid var(--line);
+}
+
+.blog-image-link {
+  display: block;
+  overflow: hidden;
+}
+
+.blog-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.blog-copy {
+  padding: clamp(0.9rem, 1.7vw, 1.4rem);
+}
+
+.blog-copy .blog-meta {
+  margin-bottom: 0.8rem;
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+}
+
+.blog-copy h3 {
+  font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.blog-copy > p:not(.blog-meta) {
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.blog-read-link {
+  margin-top: auto;
+  padding: 0 clamp(0.9rem, 1.7vw, 1.4rem) 1.25rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.blog-archive .blog-list {
+  overflow: hidden;
+}
+
+.post-header,
+.post-source {
+  max-width: var(--narrow-width);
+  margin-inline: auto;
+}
+
+.post-header {
+  padding-bottom: 2.5rem;
+  border-bottom: 0;
+}
+
+.post-header .back-link {
+  margin-bottom: 2.5rem;
+}
+
+.post-header h1 {
+  font-size: clamp(2.15rem, 5vw, 4rem);
+  line-height: 1.15;
+}
+
+.post-meta {
+  flex-wrap: wrap;
+}
+
+.post-cover {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.post-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-soft);
+}
+
+.prose {
+  overflow-wrap: break-word;
+}
+
+.prose h3 {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.prose figure {
+  max-width: 52rem;
+  margin-block: 2.5rem;
+}
+
+.prose figure img,
+.post-video video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+  border-radius: var(--radius-soft);
+}
+
+.post-video video {
+  width: 100%;
+}
+
+.prose figcaption {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.prose hr {
+  margin-block: 3rem;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.prose :not(pre) > code {
+  padding: 0.12em 0.3em;
+  border-radius: 0.2rem;
+  background: var(--accent-soft);
+  font-size: 0.85em;
+}
+
+.prose div.highlighter-rouge,
+.prose > pre {
+  max-width: 52rem;
+  margin-block: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-soft);
+  background: var(--paper-deep);
+}
+
+.prose div.highlighter-rouge::before {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--heading-font);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  content: "CODE";
+}
+
+.prose div.language-sql::before {
+  content: "SQL";
+}
+
+.prose div.language-text::before {
+  content: "OUTPUT";
+}
+
+.prose pre {
+  margin: 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  tab-size: 4;
+  white-space: pre;
+}
+
+.prose pre code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.highlight .k,
+.highlight .kd,
+.highlight .kt,
+.highlight .o {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.highlight .s,
+.highlight .s1,
+.highlight .s2 {
+  color: var(--accent-hover);
+}
+
+.highlight .c,
+.highlight .c1,
+.highlight .cm {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.post-source {
+  padding-block: 2rem 5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 52rem) and (orientation: portrait) {
+  .blog-list,
+  .home-page .blog-list {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-item + .blog-item,
+  .home-page .blog-item + .blog-item {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .blog-copy {
+    padding: 1.35rem;
+  }
+
+  .blog-read-link {
+    padding-inline: 1.35rem;
+  }
+}
+
+@media (max-height: 44rem) and (min-width: 52.01rem), (max-width: 52rem) and (orientation: landscape) {
+  .home-page .blog-image {
+    max-height: 16svh;
+  }
+
+  .home-page .blog-copy {
+    padding: 0.75rem;
+  }
+
+  .home-page .blog-copy > p:not(.blog-meta) {
+    -webkit-line-clamp: 2;
+  }
+
+  .home-page .blog-read-link {
+    padding: 0 0.75rem 0.75rem;
   }
 }

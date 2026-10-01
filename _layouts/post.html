@@ -1,17 +1,28 @@
 ---
 layout: default
 ---
-<article class="post shell narrow">
+<article class="post shell">
   <header class="post-header">
-    <a class="back-link" href="{{ '/writing/' | relative_url }}">← All notes</a>
-    <p class="kicker">{% if page.tags.size > 0 %}{{ page.tags | join: ' · ' }}{% else %}Note{% endif %}</p>
-    <h1>{{ page.title }}</h1>
+    <a class="back-link" href="{{ '/blog/' | relative_url }}">← All posts</a>
+    <p class="kicker">{% if page.tags.size > 0 %}{{ page.tags | join: ' · ' }}{% else %}Blog{% endif %}</p>
+    <h1>{{ page.title | escape }}</h1>
     {% if page.description %}<p class="post-deck">{{ page.description }}</p>{% endif %}
     <div class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
+      <span>Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></span>
       <span aria-hidden="true">·</span>
       <span>{{ content | number_of_words | divided_by: 220 | plus: 1 }} min read</span>
     </div>
   </header>
+  {% if page.image %}
+  <figure class="post-cover">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" width="{{ page.image_width | default: 1280 }}" height="{{ page.image_height | default: 720 }}" fetchpriority="high">
+  </figure>
+  {% endif %}
   <div class="prose">{{ content }}</div>
+  {% if page.source_url %}
+  <footer class="post-source">
+    <p>Originally published on <a href="{{ page.source_url | escape }}" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>.</p>
+    <a class="text-link" href="{{ '/blog/' | relative_url }}">← Back to Blog</a>
+  </footer>
+  {% endif %}
 </article>
