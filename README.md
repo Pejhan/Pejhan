@@ -25,6 +25,8 @@ Post front matter includes `title`, `description`, `date`, `tags`, `image`, `ima
 
 Side projects are maintained in `_data/side_projects.yml`. Each has a `slug` matching its Markdown page under `side-projects/`, using `_layouts/project.html`. Cards link to `/side-projects/:slug/`; project pages include the preview image, README documentation, and repository links. Relative README links resolve to their source files on GitHub.
 
+The Grabgram demo is copied from its README upload into `assets/videos/grabgram-demo.mp4` and plays directly on the project page, with a download link. Its poster lives at `assets/images/side-projects/grabgram-demo.jpg`. Keep these files local so playback does not depend on GitHub attachment links or temporary video URLs.
+
 The same top navigation is available on the homepage, archives, blog posts, and project pages. Blog and Side projects open their archives; Introduction and About return to the corresponding homepage section. The navbar highlights the homepage section in view or the active Blog/Side projects page.
 
 Profile and social links are configured in `_config.yml`. A downloadable résumé can be added through `social.resume`.
