@@ -33,4 +33,3 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
-  - scripts
