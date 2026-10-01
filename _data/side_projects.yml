@@ -9,6 +9,8 @@
   image_alt: "Enhanced trash icon with a music note and keyboard shortcut keys"
   repository_url: "https://github.com/Pejhan/quodlibet-trash-current"
   readme_url: "https://github.com/Pejhan/quodlibet-trash-current#readme"
+  readme_branch: "main"
+  readme_path: "README.md"
   live_url: ""
 
 - title: "Playlist Shortcuts"
@@ -22,6 +24,8 @@
   image_alt: "Enhanced favorite star icon over a playlist with keyboard shortcut keys"
   repository_url: "https://github.com/Pejhan/quodlibet-playlist-shortcuts"
   readme_url: "https://github.com/Pejhan/quodlibet-playlist-shortcuts#readme"
+  readme_branch: "main"
+  readme_path: "README.md"
   live_url: ""
 
 - title: "Grabgram"
@@ -34,4 +38,9 @@
   image_alt: "Enhanced Grabgram folded paper plane icon with download progress and media tiles"
   repository_url: "https://github.com/Pejhan/Grabgram"
   readme_url: "https://github.com/Pejhan/Grabgram#readme"
+  readme_branch: "main"
+  readme_path: "README.md"
+  # The page already has a local player for this GitHub video attachment.
+  readme_omit_urls:
+    - "https://github.com/user-attachments/assets/62538202-f5f9-4a9b-ba7c-87be545436fe"
   live_url: ""

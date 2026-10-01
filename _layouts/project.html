@@ -16,7 +16,15 @@ layout: default
   <figure class="post-cover">
     <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | escape }}" width="1280" height="720" fetchpriority="high">
   </figure>
-  <div class="prose">{{ content }}</div>
+  <div class="prose">
+    {{ content }}
+    {% assign documentation = site.data.project_readmes[page.project_slug] %}
+    {% if documentation %}
+      {{ documentation }}
+    {% else %}
+      <p>Read the project documentation in the <a href="{{ project.readme_url }}">README on GitHub</a>.</p>
+    {% endif %}
+  </div>
   <footer class="post-source">
     <p>Project documentation from the <a href="{{ project.readme_url }}">README on GitHub</a>.</p>
     <a class="text-link" href="{{ '/side-projects/' | relative_url }}">← Back to Side projects</a>

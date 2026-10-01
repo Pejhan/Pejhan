@@ -6,3 +6,5 @@ vendor/
 Gemfile.lock
 _ReadMe.MD
 theme-playground.html
+_data/project_readmes.yml
+_data/project_readmes.yml.tmp
