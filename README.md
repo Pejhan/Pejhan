@@ -1,4 +1,4 @@
-![Five blue data and programming icons on a white background with pale blue contour lines](assets/images/profile-header.png)
+![Five blue data and programming icons on a white background with pale blue dots](assets/images/profile-header.png)
 
 # Pezhman Aliabadi — Connecting the Dots
 
