@@ -1,3 +1,5 @@
+![Five blue data and programming icons on a white background with pale blue contour lines](assets/images/profile-header.png)
+
 # Pezhman Aliabadi — Connecting the Dots
 
 > Everything is and can be connected; it is up to us to find the pattern.
