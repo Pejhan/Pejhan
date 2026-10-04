@@ -1,3 +1,6 @@
+
+[![Five blue data and programming icons with pejhan.ir on a white background with pale blue dots](assets/images/profile-header.png)](https://pejhan.ir)
+
 ## 📝 Blog
 
 - **[Finding order where there seem to be None](https://www.linkedin.com/pulse/finding-order-where-seem-none-pezhman-aliabadi-gkqif)** — Use foreign-key relationships and recursive SQL to find the order for migrating data between related tables.
@@ -16,4 +19,3 @@ Often working with SQL, Python, statistics, Power BI, and data modeling. Still l
 
 [GitHub](https://github.com/pejhan) · [LinkedIn](https://www.linkedin.com/in/pejhan) · [Telegram](https://t.me/pejhan)
 
-[![Five blue data and programming icons with pejhan.ir on a white background with pale blue dots](assets/images/profile-header.png)](https://pejhan.ir)
