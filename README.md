@@ -1,13 +1,3 @@
-![Five blue data and programming icons on a white background with pale blue dots](assets/images/profile-header.png)
-
-# Pezhman Aliabadi — Connecting the Dots
-
-> Everything is and can be connected; it is up to us to find the pattern.
-
-I'm a data analyst and BI developer exploring ideas through data, code, and curiosity. This is a collection of practical lessons, experiments, and small tools from that work.
-
-🌐 [Visit pejhan.ir](https://pejhan.ir)
-
 ## 📝 Blog
 
 - **[Finding order where there seem to be None](https://www.linkedin.com/pulse/finding-order-where-seem-none-pezhman-aliabadi-gkqif)** — Use foreign-key relationships and recursive SQL to find the order for migrating data between related tables.
@@ -25,3 +15,5 @@ I'm a data analyst and BI developer exploring ideas through data, code, and curi
 Often working with SQL, Python, statistics, Power BI, and data modeling. Still learning how to ask better questions, explain results, and document what worked.
 
 [GitHub](https://github.com/pejhan) · [LinkedIn](https://www.linkedin.com/in/pejhan) · [Telegram](https://t.me/pejhan)
+
+[![Five blue data and programming icons with pejhan.ir on a white background with pale blue dots](assets/images/profile-header.png)](https://pejhan.ir)
