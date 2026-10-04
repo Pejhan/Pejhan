@@ -1,5 +1,5 @@
 
-[![Five blue data and programming icons with pejhan.ir on a white background with pale blue dots](assets/images/profile-header.png)](https://pejhan.ir)
+[![Five teal data and programming icons with pejhan.ir on a white background with pale blue dots](assets/images/profile-header.png)](https://pejhan.ir)
 
 ## 📝 Blog
 
