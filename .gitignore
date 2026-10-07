@@ -6,3 +6,4 @@ vendor/
 Gemfile.lock
 _ReadMe.MD
 theme-playground.html
+assets/js/playground-rays.js
