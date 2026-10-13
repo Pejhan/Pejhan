@@ -15,7 +15,11 @@
 
 ## 👋 About & contact
 
-Often working with SQL, Python, statistics, Power BI, and data modeling. Still learning how to ask better questions, explain results, and document what worked.
+I prefer
+    Light mode 💡 over Dark mode 🌙, 
+    Tweaking 🛠️ over Cracking 🔓,
+    pen and paper 🗒️ over cursors and digital screens 🖥️, 
+    outsourcing repetitive tasks to agents 🔁, while doing the heavy-liftings myself 🏋️‍♂️.
 
 [GitHub](https://github.com/pejhan) · [LinkedIn](https://www.linkedin.com/in/pejhan) · [Telegram](https://t.me/pejhan)
 
