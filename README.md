@@ -9,8 +9,8 @@
 
 ## 🛠️ Side projects
 
-- **[Trash Current Track](https://github.com/Pejhan/quodlibet-trash-current)** — A Quod Libet plugin that confirms before moving the current track to the trash and removing it from the library.
-- **[Playlist Shortcuts](https://github.com/Pejhan/quodlibet-playlist-shortcuts)** — Add the current Quod Libet track to playlists with global keyboard shortcuts, without duplicates.
+- **[Trash Current Track](https://github.com/Pejhan/quodlibet-trash-current)** — A simple plugin for QuodLibet giving you the ability (or let's say liberty) to move the current playing track to trash using global keyboard shortcuts.
+- **[Playlist Shortcuts](https://github.com/Pejhan/quodlibet-playlist-shortcuts)** — Add the current Quod Libet track to playlists with global keyboard shortcuts.
 - **[Grabgram](https://github.com/Pejhan/Grabgram)** — A desktop app for downloading Telegram videos, audio, photos, and documents, with resumable downloads and download history.
 
 ## 👋 About & contact
